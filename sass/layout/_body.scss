@@ -1,0 +1,17 @@
+html{
+
+}
+body{
+  display: flex; // Sticky Footer
+  min-height: 100vh;
+  flex-direction: column;
+}
+.site-content { // Sticky Footer
+  flex: 1;
+}
+
+.container-fluid{
+  max-width: 1020px;
+  width:100%;
+  margin: 0 auto;
+}

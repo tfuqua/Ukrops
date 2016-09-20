@@ -1,0 +1,16 @@
+
+
+nav.main-navigation {
+
+  ul {
+
+    float:right;
+    padding-top:10px;
+
+    li > a {
+      color:$menu-link-color;
+      font-size:18px;
+    }
+  }
+
+}
