@@ -24,16 +24,18 @@
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'list-inline') ); ?>
-			<i class="fa fa-search"></i>
 		</nav><!-- #site-navigation -->
 
-			<div style="display:none">
-			<?php get_search_form(); ?>
+		<div id="searchForm" class="search-form">
+			<button id="searchToggle" class="search-toggle">
+				<i class="fa fa-search"></i>
+			</button>
+
+			<div class="search-fields">
+				<?php get_search_form(); ?>
 			</div>
-		<div>
-
-
 		</div>
+
 	</header>
 
 	<div id="content" class="site-content">

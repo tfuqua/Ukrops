@@ -11,9 +11,15 @@ get_header(); ?>
   <main id="main" class="site-main" role="main">
 
     <!-- Hero Image -->
-    <?php if(get_field('image')) { ?>
+    <?php if(get_field('hero_image')) { ?>
     	<div class="hero">
-        <img src="<?php echo get_field('image')?>" alt=""/>
+        <img src="<?php echo get_field('hero_image')?>" alt=""/>
+        <div class="hero-text">
+          <div class="call-to-action"><?php echo get_field('call_to_action')?></div>
+          <div class="hero-button">
+            <a href="#"><?php echo get_field('button_text')?></a>
+          </div>
+        </div>
       </div>
     <?php } ?>
 
@@ -24,7 +30,7 @@ get_header(); ?>
         <div class="branding">
           <?php while ( have_rows('brand') ) : the_row(); ?>
               <div class="brand-item">
-                <img src="<?php echo the_sub_field('image');?>" alt="" />
+                <img src="<?php echo the_sub_field('brand_logo');?>" alt="" />
               </div>
           <?php endwhile; ?>
         </div>
@@ -58,22 +64,48 @@ get_header(); ?>
         </div>
     <?php } ?>
 
-    <!-- Featured Pages -->
+    <!-- Featured Posts -->
     <?php
-      if( have_rows('posts')):
-        $rows = get_field('posts');
-      echo '<ul>';
 
-        foreach( $rows as $post):?>
-          <li>
-              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-              <span>Post Object Custom Field: <?php the_field('content'); ?></span>
-          </li>
-      <?php endforeach; ?>
-      </ul>
-      <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+      if( have_rows('featured_posts') ) { ?>
+        <div class="featured-posts-wrapper">
+          <div class="featured-posts">
+            <?php while (have_rows('featured_posts') ) : the_row(); ?>
+              <div class="featured-post">
+                <?php $post_object = get_sub_field('featured_post');
+                if( $post_object ):
+                  $post = $post_object;
+                  setup_postdata( $post ); ?>
 
-    <?php endif; ?>
+                  <div class="featured-thumbnail">
+                    <?php if ( has_post_thumbnail() ) {
+                        the_post_thumbnail('medium');
+                    } else { ?>
+                      <img src="<?php echo get_sub_field('post_image')?>" alt=""/>
+                    <?php
+                    }?>
+                  </div>
+                  <div class="featured-post-content">
+                    <div class="featured-title">
+                      <?php the_title();?>
+                    </div>
+                    <div class="featured-description">
+                      <?php the_excerpt() ?>
+                    </div>
+                    <div class="featured-button">
+                      <a href="#">
+                        <?php echo the_sub_field('button_text') ?>
+                      </a>
+                    </div>
+                  </div>
+                  <?php wp_reset_postdata();
+                  endif; ?>
+              </div>
+          <?php endwhile; ?>
+          </div>
+        </div>
+    <?php } ?>
+
 
   </main><!-- #main -->
 </div><!-- #primary -->
