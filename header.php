@@ -62,19 +62,16 @@
 					</div>
 				</div>
 
-			<?php
-			$args = array(
-						'menu'              => 'primary',
-						'theme_location'    => 'primary',
-		       	'depth'            	=> 2,
-				    'menu_id'           => 'primary-menu',
-				    'fallback_cb'       => 'my_walker::fallback',
-				    'walker'            => new my_walker()
-			    );
-			?>
-
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu') );
+				<?php
+				$args = array(
+							'menu'              => 'primary',
+							'theme_location'    => 'primary',
+							'depth'            	=> 2,
+							'menu_id'           => 'primary-menu',
+							'fallback_cb'       => 'my_walker::fallback',
+							'walker'            => new my_walker()
+						);
 				wp_nav_menu ($args);
 				?>
 			</nav><!-- #site-navigation -->

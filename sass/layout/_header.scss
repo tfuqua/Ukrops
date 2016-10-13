@@ -1,5 +1,4 @@
-
-header {
+  header {
 
   position: relative;
   text-align: center;
@@ -46,11 +45,11 @@ header {
       }
     }
   }
+}
 
-  /* Child Site Styling */
-  @media (min-width: $screen-md-min) {
-    .header-container .search-form{
-      display: none;
-    }
+/* Child Site Styling */
+@media (min-width: $screen-md-min) {
+ .child-site .header-container .search-form{
+    display: none;
   }
 }
