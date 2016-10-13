@@ -1,23 +1,56 @@
 
 header {
-  padding:15px 15px;
-  margin-top:10px;
-  border-top: 1px dashed $header-border-color;
-  min-height: $header-height;
+
+  position: relative;
+  text-align: center;
   background: $header-bg;
   z-index: 500;
   position: relative;
-  
+  border-top:10px solid #f5f5f5;
+
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 
+  @media (min-width: $screen-md-min) {
+    padding-right: 0;
+  }
+
+  .header-container {
+    max-width: $max-site-width;
+    width:100%;
+    position: relative;
+    min-height: 65px;
+    margin: 0 auto;
+
+      @media (min-width: $screen-md-min) {
+        padding:0 15px;
+      }
+  }
+
   .brand{
-    float:left;
-    width:250px;
+    @media (min-width: $screen-md-min) {
+      float:left;
+    }
 
     img {
+
       max-width:100%;
+      width:auto;
+      height:45px;
+      margin:10px auto;
+
+      @media (min-width: $screen-md-min) {
+        height:45px;
+        display:block;
+      }
+    }
+  }
+
+  /* Child Site Styling */
+  @media (min-width: $screen-md-min) {
+    .header-container .search-form{
+      display: none;
     }
   }
 }

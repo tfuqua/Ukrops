@@ -11,7 +11,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-6">
-					<?dynamic_sidebar('footer');?>
+					<?php dynamic_sidebar('footer');?>
 				</div>
 				<div class="col-md-6">
 					<nav class="footer-navigation" role="navigation">
@@ -20,7 +20,7 @@
 				</div>
 			</div>
 
-			<?dynamic_sidebar('copyright');?>
+			<?php dynamic_sidebar('copyright');?>
 
 		</div>
 	</footer>

@@ -3,6 +3,11 @@ ul.social-icons {
 
   padding:10px 0;
   list-style: none;
+  text-align: center;
+
+  @media (min-width: $screen-md-min) {
+    text-align: left;
+  }
 
   li {
     display:inline-block;

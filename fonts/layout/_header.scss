@@ -1,0 +1,21 @@
+
+header {
+  padding:15px 15px;
+  background: $header-bg;
+  z-index: 500;
+  position: relative;
+  border-top:10px solid #f5f5f5;
+
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+
+  .brand{
+    float:left;
+    width:250px;
+
+    img {
+      max-width:100%;
+    }
+  }
+}

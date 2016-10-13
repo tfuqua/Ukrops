@@ -5,8 +5,13 @@ footer {
   padding: 20px 15px 10px;
 
   .footer-widget {
+    text-align: center;
     color:#e7d8c8;
     font-weight: 300;
+
+    @media (min-width: $screen-md-min) {
+      text-align: left;
+    }
 
     a {
       color:#e7d8c8;
@@ -14,8 +19,8 @@ footer {
   }
 
   .copyright {
-    padding:15px 0 0 0;
     text-align: center;
+    padding:15px 0 0 0;
     font-weight: 300;
     color:#e7d8c8;
 
@@ -28,17 +33,33 @@ footer {
 
     ul {
       list-style: none;
+      padding:0;
 
       li {
         float:left;
-        width:33.333333%;
+        width:100%;
+        padding:8px 5px;
+
+        @media(min-width: $screen-sm-min) {
+          width:50%;
+          text-align: center;
+        }
+
+        @media(min-width: $screen-lg-min) {
+          padding: 15px 5px;
+        }
+
+        @media(min-width: $screen-lg-min) {
+          width:33.33333%;
+          text-align: left;
+        }
 
         a {
           font-size: 16px;
           font-weight: 500;
+          padding:15px 0;
           font-style: normal;
           font-stretch: normal;
-          line-height: 3.13;
           color: #ffffff;
         }
       }
