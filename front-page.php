@@ -10,18 +10,22 @@ get_header(); ?>
 <div id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
 
+    <div class="brand-wrapper">
+
     <!-- Hero Image -->
     <?php if(get_field('hero_image')) { ?>
       <?php $background = wp_get_attachment_image_src(get_field('hero_image'), 'full', false); ?>
 	     <div class="hero" style="background-image: url('<?php echo $background[0] ?>');">
-        <div class="hero-text">
-          <?php echo get_field('hero_text')?>
-          <?php if(get_field('button_text')) { ?>
-          <div class="hero-button">
-            <a href="#"><?php echo get_field('button_text')?></a>
-          </div>
-          <?php } ?>
-        </div>
+         <div class="hero-text-wrapper">
+           <div class="hero-text">
+             <?php echo get_field('hero_text')?>
+             <?php if(get_field('button_text')) { ?>
+             <div class="hero-button">
+               <a href="<?php echo get_field('button_link')?>"><?php echo get_field('button_text')?></a>
+             </div>
+             <?php } ?>
+           </div>
+         </div>
       </div>
     <?php } ?>
 
@@ -43,6 +47,7 @@ get_header(); ?>
         </div>
 
     <?php } ?>
+    </div>
 
     <!-- Featured Content -->
     <?php
@@ -50,7 +55,7 @@ get_header(); ?>
         <div class="featured-content-wrapper">
           <div class="container-fluid">
             <?php while ( have_rows('featured_content') ) : the_row(); ?>
-                <div class="featured-item" style="background:<?php echo the_sub_field('color');?>;">
+                <div class="featured-item">
                   <div class="img-wrapper">
                     <?php echo wp_get_attachment_image(get_sub_field('image'), 'medium', false, array( 'class' => 'lazy-load'));?>
                   </div>
@@ -60,7 +65,7 @@ get_header(); ?>
                       <?php echo the_sub_field('body');?>
                     </div>
                     <div class="featured-button">
-                      <a style="color:<?php echo the_sub_field('color');?>">
+                      <a href="<?php echo the_sub_field('button_link')?>">
                         <?php echo the_sub_field('button_text');?>
                       </a>
                     </div>

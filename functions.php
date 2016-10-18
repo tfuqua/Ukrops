@@ -92,10 +92,14 @@ function create_product_taxonomy() {
 		'post',
 		array(
 			'label' => __( 'Product' ),
-			'hierarchical' => false,
-			'labels' => $labels
+			'hierarchical' 	=> true,
+      'with_front'    => true,
+			'slug' 					=> 'products',
+			'labels' 				=> $labels
 		)
 	);
+
+	flush_rewrite_rules();
 }
 
 add_action( 'init', 'create_product_taxonomy' );

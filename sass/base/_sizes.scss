@@ -3,7 +3,8 @@ $max-site-width: 1200px;
 
 
 // Defining values
-$screen-sm-min: 481px;
+//$screen-sm-min: 481px;
+$screen-sm-min: 520px;
 $screen-xs-max: ($screen-sm-min - 1);
 $screen-md-min: 900px;
 $screen-sm-max: ($screen-md-min - 1);

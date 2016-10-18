@@ -15,15 +15,25 @@ ul.social-icons {
     a {
       display: block;
       border-radius: 50%;
-      width: 50px;
-      height: 50px;
+      width: 45px;
+      height: 45px;
       text-align: center;
       color:#fff;
 
+      @media (min-width: $screen-md-min) {
+        width: 50px;
+        height: 50px;
+      }
+
       .fa {
         display: block;
-        font-size: 28px;
-        line-height: 50px;
+        font-size: 24px;
+        line-height: 45px;
+
+        @media (min-width: $screen-md-min) {
+          font-size: 28px;
+          line-height: 50px;
+        }
       }
 
       &.icon-facebook {
@@ -34,6 +44,9 @@ ul.social-icons {
       }
       &.icon-rss {
         background: #ff9000;
+      }
+      &.icon-pinterest{
+        background: #cb2027;
       }
       &.icon-twitter {
         background: #55acee;

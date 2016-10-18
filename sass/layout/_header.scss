@@ -19,9 +19,9 @@
     max-width: $max-site-width;
     width:100%;
     position: relative;
-    min-height: 65px;
+    min-height: 55px;
+    padding-right:55px;
     margin: 0 auto;
-
       @media (min-width: $screen-md-min) {
         padding:0 15px;
       }
@@ -36,11 +36,11 @@
 
       max-width:100%;
       width:auto;
-      height:45px;
-      margin:10px auto;
+      height:40px;
+      margin:6px auto 10px;
 
       @media (min-width: $screen-md-min) {
-        height:45px;
+        height:44px;
         display:block;
       }
     }

@@ -5,7 +5,7 @@
 .featured-posts{
   margin: 0 auto;
   max-width: 1200px;
-  padding:30px 0 50px;
+  padding:30px 15px 50px;
 
   @media (min-width: $screen-md-min) {
     display:flex;
@@ -24,7 +24,7 @@
       flex:1;
       margin-left:0;
       margin-right:40px;
-      
+
       &:last-child{ margin-right:0;}
     }
 
@@ -41,10 +41,17 @@
       }
     }
 
-    .featured-thumbnail img {
-      width:auto;
-      min-width: 100%;
-      height:200px;
+    .featured-thumbnail {
+
+      overflow: hidden;
+      border-radius: 7px;
+
+      img {
+        width:auto;
+        min-width: 100%;
+        border-radius: 7px;
+        height:200px;
+      }
     }
 
     .featured-title {
@@ -66,10 +73,11 @@
       margin-top:15px;
       border-radius: 5px;
       display:inline-block;
-      background-color: #c1311a;
+      background-image: linear-gradient(to bottom, #db2c10, #bf311a);
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
       font-size: 20px;
       font-weight: 500;
-      color: #f4eadc;
+      color: #fff;
     }
   }
 }
