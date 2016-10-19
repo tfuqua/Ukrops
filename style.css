@@ -7269,18 +7269,17 @@ header {
       header .header-container {
         padding: 0 15px;
         padding-right: 65px; } }
-  @media (min-width: 900px) {
-    header .brand {
-      float: left; } }
-  header .brand img {
-    max-width: 100%;
-    width: auto;
-    height: 40px;
-    margin: 6px auto 10px; }
-    @media (min-width: 900px) {
-      header .brand img {
-        height: 44px;
-        display: block; } }
+  header .brand {
+    float: left; }
+    header .brand img {
+      max-width: 100%;
+      width: auto;
+      height: 40px;
+      margin: 6px auto 10px; }
+      @media (min-width: 900px) {
+        header .brand img {
+          height: 44px;
+          display: block; } }
 
 /* Child Site Styling */
 @media (min-width: 900px) {
@@ -7573,11 +7572,11 @@ footer {
     footer .footer-navigation ul li {
       float: left;
       width: 100%;
-      padding: 8px 5px; }
+      padding: 8px 5px;
+      text-align: center; }
       @media (min-width: 520px) {
         footer .footer-navigation ul li {
-          width: 50%;
-          text-align: center; } }
+          width: 50%; } }
       @media (min-width: 1080px) {
         footer .footer-navigation ul li {
           padding: 15px 5px; } }
@@ -7752,7 +7751,7 @@ ul.social-icons {
         max-height: 215px; } }
 
 .featured-content-wrapper {
-  background-image: url("images/wood-texture.png");
+  background-image: url("images/wood.png");
   background-size: contain; }
   .featured-content-wrapper .container-fluid {
     margin: 0 auto 15px;

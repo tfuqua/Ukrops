@@ -39,10 +39,10 @@ footer {
         float:left;
         width:100%;
         padding:8px 5px;
+        text-align: center;
 
         @media(min-width: $screen-sm-min) {
           width:50%;
-          text-align: center;
         }
 
         @media(min-width: $screen-lg-min) {
