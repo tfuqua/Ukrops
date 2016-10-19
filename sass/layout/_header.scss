@@ -24,6 +24,7 @@
     margin: 0 auto;
       @media (min-width: $screen-md-min) {
         padding:0 15px;
+        padding-right:65px;
       }
   }
 
@@ -51,5 +52,11 @@
 @media (min-width: $screen-md-min) {
  .child-site .header-container .search-form{
     display: none;
+  }
+
+  header.child-site .header-container{
+    @media (min-width: $screen-md-min) {
+      padding-right:15px;
+    }
   }
 }

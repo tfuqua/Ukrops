@@ -29,8 +29,11 @@
     display:table-cell;
     vertical-align:middle;
     padding:20px 0;
-    max-width: $max-site-width;
-    margin:0 auto;
+
+    > div {
+      max-width: $max-site-width;
+      margin:0 auto;
+    }
   }
 
   .hero-text{

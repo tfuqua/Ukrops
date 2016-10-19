@@ -7267,7 +7267,8 @@ header {
     margin: 0 auto; }
     @media (min-width: 900px) {
       header .header-container {
-        padding: 0 15px; } }
+        padding: 0 15px;
+        padding-right: 65px; } }
   @media (min-width: 900px) {
     header .brand {
       float: left; } }
@@ -7285,6 +7286,10 @@ header {
 @media (min-width: 900px) {
   .child-site .header-container .search-form {
     display: none; } }
+
+@media (min-width: 900px) and (min-width: 900px) {
+  header.child-site .header-container {
+    padding-right: 15px; } }
 
 .nav-wrapper {
   display: none; }
@@ -7610,9 +7615,10 @@ footer {
   .hero .hero-text-wrapper {
     display: table-cell;
     vertical-align: middle;
-    padding: 20px 0;
-    max-width: 1200px;
-    margin: 0 auto; }
+    padding: 20px 0; }
+    .hero .hero-text-wrapper > div {
+      max-width: 1200px;
+      margin: 0 auto; }
   .hero .hero-text {
     font-size: 26px;
     line-height: 1.33;

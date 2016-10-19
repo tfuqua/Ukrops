@@ -17,13 +17,15 @@ get_header(); ?>
       <?php $background = wp_get_attachment_image_src(get_field('hero_image'), 'full', false); ?>
 	     <div class="hero" style="background-image: url('<?php echo $background[0] ?>');">
          <div class="hero-text-wrapper">
-           <div class="hero-text">
-             <?php echo get_field('hero_text')?>
-             <?php if(get_field('button_text')) { ?>
-             <div class="hero-button">
-               <a href="<?php echo get_field('button_link')?>"><?php echo get_field('button_text')?></a>
+           <div>
+             <div class="hero-text">
+               <?php echo get_field('hero_text')?>
+               <?php if(get_field('button_text')) { ?>
+               <div class="hero-button">
+                 <a href="<?php echo get_field('button_link')?>"><?php echo get_field('button_text')?></a>
+               </div>
+               <?php } ?>
              </div>
-             <?php } ?>
            </div>
          </div>
       </div>
