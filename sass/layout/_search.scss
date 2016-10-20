@@ -4,7 +4,7 @@
     position: absolute;
     z-index: 600;
     right:15px;
-    top:10px;
+    top:5px;
     padding-right:45px;
   }
 
@@ -89,7 +89,7 @@
     line-height:38px;
     padding:0;
     color:#d0021b;
-    font-size: 28px;
+    font-size: 22px;
 
     @media (min-width: $screen-md-min) {
       display: block;

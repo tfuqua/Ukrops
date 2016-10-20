@@ -14,10 +14,11 @@
 
   .featured-post {
     overflow:hidden;
-    margin: 40px auto;
     max-width: 350px;
+    margin:0px auto 80px;
 
     @media (min-width: $screen-md-min) {
+      margin: 40px auto;
       max-width: none;
       display: flex;
       flex-direction: column;
@@ -76,7 +77,7 @@
       display:inline-block;
       background-image: linear-gradient(to bottom, #db2c10, #bf311a);
       box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 500;
       color: #fff;
     }

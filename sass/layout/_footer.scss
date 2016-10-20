@@ -1,8 +1,19 @@
 footer {
-  background: $footer-bg url('images/footer-bg.png') no-repeat;
-  background-position: center bottom 50px;
-  background-size: contain;
-  padding: 20px 15px 10px;
+  background: url('images/brown.png') repeat;
+  padding: 0;
+
+  .footer-wrapper{
+    background: url('images/illustration-01.png') no-repeat;
+    background-size: auto;
+    background-position: left bottom 25px;
+
+    padding: 20px 15px 10px;
+
+    @media (min-width: $screen-md-min) {
+      background-position: center bottom 25px;
+      background-size: contain;
+    }
+  }
 
   .footer-widget {
     text-align: center;
