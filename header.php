@@ -20,9 +20,12 @@
 		<?php if (!is_main_site()) { ?>
 			<div class="extra-nav">
 				<div class="container-fluid">
-					<?php
-						wp_nav_menu( array( 'theme_location' => 'extra-nav', 'menu_id' => 'extra-nav', 'menu_class' => 'list-inline'));
-					?>
+						<?php
+							$args = array('theme_location' => 'extra-nav', 'menu_id' => 'extra-nav', 'menu_class' => 'list-inline');
+	         		switch_to_blog(1);
+	         		wp_nav_menu( $args );
+	         		restore_current_blog();
+						?>
 					<div id="searchForm" class="search-form">
 						<button id="searchToggle" class="search-toggle">
 							<i class="fa fa-search"></i>

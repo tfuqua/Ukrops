@@ -29,9 +29,12 @@
   }
 
   .brand{
-    //@media (min-width: $screen-md-min) {
+      padding-left:10px;
       float:left;
-    //}
+
+      @media (min-width: $screen-md-min) {
+        padding-left:0;
+      }
 
     img {
 

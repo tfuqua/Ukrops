@@ -104,6 +104,12 @@ function create_product_taxonomy() {
 
 add_action( 'init', 'create_product_taxonomy' );
 
+//This method helps keep get_excerpt() to 5 lines
+function custom_excerpt_length( $length ) {
+	return 22;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 
 /**
  * Enqueue scripts and styles.

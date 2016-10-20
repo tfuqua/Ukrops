@@ -8,20 +8,21 @@
 	</div><!-- #content -->
 
 	<footer class="site-footer" role="contentinfo">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-6">
-					<?php dynamic_sidebar('footer');?>
+		<div class="footer-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+						<?php dynamic_sidebar('footer');?>
+					</div>
+					<div class="col-md-6">
+						<nav class="footer-navigation" role="navigation">
+							<?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' ) ); ?>
+						</nav><!-- footer-nav -->
+					</div>
 				</div>
-				<div class="col-md-6">
-					<nav class="footer-navigation" role="navigation">
-						<?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' ) ); ?>
-					</nav><!-- footer-nav -->
-				</div>
+
+				<?php dynamic_sidebar('copyright');?>
 			</div>
-
-			<?php dynamic_sidebar('copyright');?>
-
 		</div>
 	</footer>
 </div><!-- #content -->

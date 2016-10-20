@@ -18,7 +18,7 @@
       position: absolute;
       top:55px;
       width:100%;
-      height: calc(100vh - 75px);
+      height: calc(100vh - 55px);
       overflow-y: auto;
 
       padding:10px 25px;
@@ -58,6 +58,7 @@ nav.main-navigation .menu-main-nav-container {
         display: block;
         text-align: left;
         padding: 17px 10px 17px 10px;
+        font-weight: 500;
 
         @media (min-width: $screen-md-min) {
           padding:19px 15px 17px;
@@ -107,40 +108,6 @@ nav.main-navigation .menu-main-nav-container {
     }
   }
 
-}
-
-.extra-nav {
-
-  display: none;
-  background:$extra-nav-bg;
-  text-align: right;
-  height: 48px;
-  padding-right:50px;
-
-  @media (min-width: $screen-md-min) {
-    display: block;
-  }
-
-  .container-fluid{
-    position: relative;
-    padding-right:50px;
-
-    .search-form{
-      top:3px;
-      right:0;
-    }
-
-    .search-toggle {
-      background: transparent;
-    }
-
-  }
-
-  ul > li > a {
-    font-size: 16px;
-    line-height: 48px;
-    color: $menu-link-color;
-  }
 }
 
 //Sub Menu Styling
@@ -218,11 +185,105 @@ nav.main-navigation .menu-main-nav-container {
     height:4px;
     border-radius: 2px;
   }
+}
 
+html.show-menu .navbar-toggle {
+  .toggle-label{
+    color:#c1311a;
+    opacity: .3;
+  }
+
+  .icon-bar {
+    background:#c1311a;
+    opacity: .3;
+  }
 }
 
 .child-site nav.main-navigation .menu-main-nav-container ul {
       @media (min-width: $screen-md-min) {
         padding-right:0;
       }
+}
+
+.extra-nav {
+
+  display: none;
+  background:$extra-nav-bg;
+  text-align: right;
+  height: 48px;
+
+  @media (min-width: $screen-md-min) {
+    display: block;
+  }
+
+  .container-fluid{
+    position: relative;
+    padding-right:40px;
+
+    .search-toggle {
+      background: transparent;
+      font-size:22px;
+      height:35px;
+      width:35px;
+      line-height: 35px;
+    }
+
+  }
+
+  ul > li {
+
+    @media (min-width: $screen-lg-min) {
+      padding:0 15px 0 15px;
+    }
+
+    a {
+      font-size: 15px;
+      line-height: 48px;
+      color: $menu-link-color;
+    }
+  }
+
+  li:first-child{
+    position: relative;
+    @media (min-width: $screen-lg-min) {
+      padding-left:5px;
+    }
+
+    &:before{
+      position: absolute;
+      width: 48px;
+      height:48px;
+      content: "";
+      background: url('images/home.png') no-repeat;
+      left: -20px;
+      top: 13px;
+    }
+  }
+
+  .search-form {
+    top:5px;
+    right:0;
+    padding-right:35px;
+
+    .search-fields {
+      height:35px;
+
+      form {
+
+        .search-wrapper {
+          padding-right:35px;
+        }
+        input {
+          height:35px;
+        }
+
+        button.search-submit{
+          line-height: 35px;
+          height:35px;
+          width:35px;
+        }
+      }
+    }
+
+  }
 }
