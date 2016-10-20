@@ -7600,7 +7600,7 @@ footer {
     @media (min-width: 900px) {
       footer .footer-wrapper {
         background-position: center bottom 25px;
-        background-size: contain; } }
+        background-size: cover; } }
   footer .footer-widget {
     text-align: center;
     color: #e7d8c8;
