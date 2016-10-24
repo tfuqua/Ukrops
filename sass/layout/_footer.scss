@@ -1,6 +1,6 @@
 footer {
   background: url('images/brown.png') repeat;
-  padding: 0;
+  padding: 10px 0;
 
   .footer-wrapper{
     background: url('images/illustration-01.png') no-repeat;
@@ -63,6 +63,10 @@ footer {
         @media(min-width: $screen-lg-min) {
           width:33.33333%;
           text-align: left;
+
+          &:nth-child(3n + 1){
+            clear:left;
+          }
         }
 
         a {
