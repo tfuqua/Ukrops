@@ -7269,6 +7269,7 @@ header {
     @media (min-width: 900px) {
       header .header-container {
         padding: 0 15px;
+        min-height: 75px;
         padding-right: 65px; } }
   header .brand {
     padding-left: 10px;
@@ -7343,7 +7344,9 @@ nav.main-navigation .menu-main-nav-container > ul {
       font-weight: 500; }
       @media (min-width: 900px) {
         nav.main-navigation .menu-main-nav-container > ul li a {
-          padding: 19px 15px 17px;
+          padding: 0 15px;
+          min-height: 75px;
+          line-height: 75px;
           border-left: 1px dashed rgba(192, 155, 114, 0.4);
           border-bottom: none; } }
     @media (min-width: 900px) {
@@ -7393,6 +7396,10 @@ nav.main-navigation .menu-main-nav-container ul ul {
     border: none;
     font-size: 16px;
     padding: 15px 8px; }
+    @media (min-width: 900px) {
+      nav.main-navigation .menu-main-nav-container ul ul li a {
+        line-height: 20px;
+        min-height: 0px; } }
   nav.main-navigation .menu-main-nav-container ul ul li:last-child a {
     border: none; }
 
@@ -7492,7 +7499,7 @@ html.show-menu .navbar-toggle .icon-bar {
     position: absolute;
     z-index: 600;
     right: 15px;
-    top: 5px;
+    top: 15px;
     padding-right: 45px; } }
 
 @media (min-width: 900px) {

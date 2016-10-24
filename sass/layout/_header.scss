@@ -24,8 +24,10 @@
     min-height: 55px;
     padding-right:55px;
     margin: 0 auto;
+
       @media (min-width: $screen-md-min) {
         padding:0 15px;
+        min-height: 75px;
         padding-right:65px;
       }
   }

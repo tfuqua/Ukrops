@@ -61,7 +61,10 @@ nav.main-navigation .menu-main-nav-container {
         font-weight: 500;
 
         @media (min-width: $screen-md-min) {
-          padding:19px 15px 17px;
+          //padding:19px 15px 17px;
+          padding: 0 15px;
+          min-height: 75px;
+          line-height: 75px;
           border-left: 1px dashed $menu-link-border-color;
           border-bottom: none;
         }
@@ -140,6 +143,11 @@ nav.main-navigation .menu-main-nav-container {
         border:none;
         font-size:16px;
         padding:15px 8px;
+
+        @media (min-width: $screen-md-min) {
+          line-height: 20px;
+          min-height: 0px;
+        }
       }
 
       &:last-child a {
