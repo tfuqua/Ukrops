@@ -12,7 +12,6 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<div class="container-fluid">
-			<h1>archive</h1>
 			<?php
 			if ( have_posts() ) : ?>
 

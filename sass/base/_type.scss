@@ -4,3 +4,33 @@ body{
   font-style: normal;
   font-weight: 400;
 }
+
+blockquote {
+  position: relative;
+  font-family: 'Vollkorn', serif;
+  font-size: 40px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+  text-align: center;
+  color: #c1311a;
+  padding: 30px 15px;
+  border:none;
+
+  &:before, &:after{
+    position: absolute;
+    width: 175px;
+    top:0;
+    content: '';
+    border-top:2px dashed $menu-link-border-color;
+    left:50%;
+    margin-left:-87.5px;
+  }
+
+  &:after{
+    top:auto;
+    bottom:0;
+  }
+}

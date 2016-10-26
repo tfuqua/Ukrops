@@ -1,0 +1,104 @@
+
+.product-list{
+    padding:65px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.product-card-wrapper{
+  flex-basis:100%;
+  display: flex;
+  flex-direction: column;
+  padding:0 15px 30px;
+
+  @media (min-width: $screen-sm-min) {
+    flex-basis: 50%;
+  }
+
+  @media (min-width: $screen-md-min) {
+    flex-basis: 33%;
+  }
+}
+
+.product-card{
+  flex:1;
+  border-radius: 7px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 12px 3px rgba(0, 0, 0, 0.05);
+  border: 1px dashed rgba(192, 155, 113, 0.75);
+
+  display: flex;
+  flex-direction: column;
+
+  .product-img{
+    margin:-1px;
+    overflow: hidden;
+    border-top-right-radius:7px;
+    border-top-left-radius: 7px;
+
+    img{
+      width:100%;
+      height: auto;
+    }
+  }
+
+  .product-section{
+    flex:1;
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    color: #794400;
+
+
+    h3 {
+      margin: 10px 0;
+      font-size: 30px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      color: #c1311a;
+    }
+  }
+
+  .product-buttons{
+    text-align: center;
+    overflow: hidden;
+    padding:10px 30px 30px;
+
+      a {
+        display: block;
+        margin-top:10px;
+        border-radius: 4px;
+        font-size: 24px;
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: normal;
+        text-align: center;
+        color: #ffffff;
+        background-image: linear-gradient(to bottom, #db2c10, #bf311a);
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+
+
+        @media (min-width: $screen-md-min) {
+          float:left;
+          width:48%;
+          margin-top:0px;
+          margin-right:2%;
+          border-top-right-radius: 0px;
+          border-bottom-right-radius: 0px;
+
+          &:nth-child(2){
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            margin-right:0;
+          }
+        }
+      }
+  }
+}

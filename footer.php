@@ -10,13 +10,18 @@
 	<footer class="site-footer" role="contentinfo">
 		<div class="footer-wrapper">
 			<div class="container-fluid">
-				<div class="row">
+				<div class="row footer-content">
 					<div class="col-md-6">
 						<?php dynamic_sidebar('footer');?>
 					</div>
 					<div class="col-md-6">
 						<nav class="footer-navigation" role="navigation">
-							<?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' ) ); ?>
+							<?php
+								$args = array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' );
+		         		switch_to_blog(1);
+		         		wp_nav_menu( $args );
+		         		restore_current_blog();
+							?>
 						</nav><!-- footer-nav -->
 					</div>
 				</div>

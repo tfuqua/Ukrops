@@ -78,7 +78,7 @@ function create_product_taxonomy() {
 		'update_item'                    => 'Update Product',
 		'add_new_item'                   => 'Add New Product',
 		'new_item_name'                  => 'New Product Name',
-		'menu_name'                      => 'Product',
+		'menu_name'                      => 'Products',
 		'view_item'                      => 'View Product',
 		'popular_items'                  => 'Popular Product',
 		'separate_items_with_commas'     => 'Separate products with commas',
@@ -89,7 +89,7 @@ function create_product_taxonomy() {
 
 	register_taxonomy(
 		'product',
-		'post',
+		'page',
 		array(
 			'label' => __( 'Product' ),
 			'hierarchical' 	=> true,
@@ -110,12 +110,12 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-
 /**
  * Enqueue scripts and styles.
  */
 function ukrops_scripts() {
 	wp_enqueue_style( 'ukrops-style', get_stylesheet_directory_uri() . '/style.min.css');
+  wp_enqueue_style( 'google-font-vollkorn', 'https://fonts.googleapis.com/css?family=Vollkorn', false);
 
 	wp_enqueue_script( 'ukrops-jquery', get_template_directory_uri() . '/js/jquery.min.js');
 	wp_enqueue_script( 'ukrops-js', get_template_directory_uri() . '/js/index.js');

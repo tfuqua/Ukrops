@@ -1,0 +1,104 @@
+.product-category{
+
+  @media (min-width: $screen-md-min) {
+    width:50%;
+    float:left;
+  }
+
+  .container-fluid,
+  .category-list {
+    max-width: 600px;
+    margin: 0 auto;
+    @media (min-width: $screen-md-min) {
+      margin: 0 0 0 auto;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    .category-header {
+      padding-right:40px;
+    }
+  }
+
+  .category-header{
+      background: url('images/red.png') top left repeat;
+      font-size: 30px;
+      text-transform: uppercase;
+      padding: 30px 0;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.3;
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+  }
+
+  .category-list{
+    padding: 15px;
+
+    @media (min-width: $screen-md-min) {
+      padding-right:45px;
+      padding-bottom:40px;
+      border-right: 1px dashed $menu-link-border-color;
+    }
+
+    ul{
+      list-style: none;
+      padding:0;
+      margin:0;
+
+      li {
+        a {
+          display: block;
+          position: relative;
+          font-size: 20px;
+          font-weight: 500;
+          font-style: normal;
+          font-stretch: normal;
+          color: #c1311a;
+          border-bottom: 1px dashed $menu-link-border-color;
+          padding:23px 20px 23px 0;
+
+          &:after{
+            font-family: 'fontAwesome';
+            content:'\f0da';
+            position: absolute;
+            font-size: 30px;
+            right:0;
+            top:0;
+            line-height: 75px;
+          }
+        }
+
+        &:last-child{
+          a { border-bottom: none; }
+        }
+      }
+    }
+  }
+
+    &:nth-child(2){
+
+      @media (min-width: $screen-md-min) {
+        .category-header {
+          padding-right:0;
+          padding-left:30px;
+        }
+        .category-list{
+          padding-left:45px;
+        }
+      }
+      .container-fluid,
+      .category-list {
+        margin: 0 auto;
+        @media (min-width: $screen-md-min) {
+          margin: 0 auto 0 0;
+        }
+      }
+
+      .category-list{
+        border: none;
+      }
+    }
+
+}
