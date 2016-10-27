@@ -18,6 +18,33 @@ $(function(){
   });
 });
 
+$(function(){
+
+  //init carousels
+  $(".product-carousel").slick({
+    prevArrow: '<button type="button" class="slick-prev carousel-btn">&lt;</button>',
+    nextArrow: '<button type="button" class="slick-next carousel-btn">&gt;</button>',
+    infinite: true,
+    speed: 500,
+    //autoplay: true,
+    autoplaySpeed: 2000,
+    fade: true,
+    slidesToShow:1,
+    adaptiveHeight: true,
+    cssEase: 'linear'
+  });
+
+  $(".quote-carousel").slick({
+      prevArrow: '<a class="slick-prev carousel-btn">&lt;</a>',
+      nextArrow: '<a class="slick-next carousel-btn">&gt;</a>',
+      appendArrows: '#carousel-nav',
+      appendDots: '#carousel-nav',
+      dots: true,
+      infinite: true,
+  });
+
+
+});
 
 
 function isElementInViewport (el) {

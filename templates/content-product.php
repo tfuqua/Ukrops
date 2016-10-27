@@ -14,8 +14,12 @@
 			</div>
 		</div>
 		<div class="product-buttons">
-			<a class="btn btn-danger" href="<?php echo get_permalink();?>">Order</a>
-			<a class="btn btn-danger" href="<?php echo get_permalink();?>">About</a>
+			<?php if(get_field('show_order_link')){ ?>
+				<a class="btn btn-danger" href="<?php echo get_permalink();?>">Order</a>
+			<?php } ?>
+			<?php if(get_field('show_about_link')){ ?>
+				<a class="btn btn-danger" href="<?php echo get_permalink();?>">About</a>
+			<?php } ?>
 		</div>
 	</div>
 </div>

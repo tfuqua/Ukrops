@@ -11,10 +11,10 @@
 		<div class="footer-wrapper">
 			<div class="container-fluid">
 				<div class="row footer-content">
-					<div class="col-md-6">
+					<div class="col-md-5 col-lg-4">
 						<?php dynamic_sidebar('footer');?>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-7 col-lg-8 footer-nav">
 						<nav class="footer-navigation" role="navigation">
 							<?php
 								$args = array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' );

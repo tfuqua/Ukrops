@@ -10,7 +10,6 @@
 
 .map-column {
   @media (min-width: $screen-md-min) {
-    border-right:1px solid rgba(192, 155, 114, 0.4);
     padding-right:30px;
     padding-top:40px;
   }
@@ -80,4 +79,46 @@ table.table.store-locator {
     }
   }
 
+}
+
+
+.store-intro{
+ font-size: 18px;
+ font-weight: 400;
+ font-style: normal;
+ font-stretch: normal;
+ line-height: 1.5;
+ color: #794400;
+}
+.store-branding{
+
+  h3 {
+    font-size: 36px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    color: #c09b72;
+    clear:both;
+  }
+
+  .store-imgs {
+    overflow: hidden;
+    margin:10px 0 50px;
+  }
+
+  .img-wrapper{
+    float:left;
+    width:33%;
+    padding:30px;
+
+    &:nth-child(4){
+      clear:left;
+      padding:30px 15px;
+    }
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
 }

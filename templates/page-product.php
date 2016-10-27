@@ -14,11 +14,11 @@ get_header(); ?>
 	         <div class="hero-text-wrapper">
 	           <div>
 	             <div class="hero-text">
-								 <h3><?php echo get_field('hero_header')?></h3>
-	               <?php echo get_field('hero_text')?>
-	               <?php if(get_field('button_text')) { ?>
+								 <h3><?php echo get_field('hero_heading')?></h3>
+	               <?php echo get_field('hero_body')?>
+	               <?php if(get_field('hero_button')) { ?>
 		               <div class="hero-button">
-		                 <a href="#"><?php echo get_field('button_text')?></a>
+		                 <a href="<?php echo get_field('hero_button_link')?>"><?php echo get_field('hero_button')?></a>
 		               </div>
 	               <?php } ?>
 	             </div>
@@ -27,45 +27,88 @@ get_header(); ?>
 	      </div>
 	    <?php } ?>
 
-
       <div class="container-fluid product-content">
 				<div class="row">
 					<div class="col-lg-8 col-lg-push-2 col-md-10 col-md-push-1">
-						<?php
-		        while ( have_posts() ) : the_post();
+							<?php
+			        while ( have_posts() ) : the_post();
 
-		  				the_content();
+			  				the_content();
 
-		  				wp_link_pages( array(
-		  					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ukrops' ),
-		  					'after'  => '</div>',
-		  				));
+			  				wp_link_pages( array(
+			  					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ukrops' ),
+			  					'after'  => '</div>',
+			  				));
 
-		        endwhile; // End of the loop.
-		        ?>
+			        endwhile; // End of the loop.
+			        ?>
 					</div>
 				</div>
       </div>
 
-      <!-- Hero Image -->
-	    <?php if(get_field('hero_image_2')) { ?>
-	      <?php $background = wp_get_attachment_image_src(get_field('hero_image_2'), 'full', false); ?>
-		     <div class="hero product-hero-dark" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('<?php echo $background[0] ?>');">
-	         <div class="hero-text-wrapper">
-	           <div>
-	             <div class="hero-text">
-                 <div class="quote">
-                   <?php echo get_field('hero_text_2')?>
-                 </div>
-                 <div class="source">
-                    <?php echo get_field('source')?>
-                 </div>
-	             </div>
-	           </div>
-	         </div>
-	      </div>
-	    <?php } ?>
-		</div>
+			<!-- Carousel -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-8 col-lg-push-2 col-md-10 col-md-push-1">
+						<?php
+							if( have_rows('carousel') ) { ?>
+								<div class="product-carousel">
+									<?php
+									while ( have_rows('carousel') ) : the_row();
+			          		if (get_sub_field('carousel_image') != '') { ?>
+											<div>
+												<?php echo wp_get_attachment_image(get_sub_field('carousel_image'), 'full', false, array( 'class' => '') ); ?>
+											</div>
+				        		<?php
+										}
+									endwhile; ?>
+								</div>
+			    		<?php
+							}?>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- extra content -->
+     <?php if(get_field('extra_content')) { ?>
+			<div class="container-fluid product-content">
+				<div class="row">
+					<div class="col-lg-8 col-lg-push-2 col-md-10 col-md-push-1">
+						<?php echo get_field('extra_content') ?>
+					</div>
+				</div>
+			</div>
+			<?php } ?>
+
+			<!-- Quote Carousel -->
+		 <?php if(get_field('quote_background')) { ?>
+			 <?php $back = wp_get_attachment_image_src(get_field('quote_background'), 'full', false); ?>
+				<div class="hero quote-hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('<?php echo $back[0] ?>');">
+					<?php if( have_rows('quotes')) { ?>
+
+						<div class="container-fluid product-content">
+							<div class="row">
+								<div class="col-lg-10 col-lg-push-1">
+									<div class="quote-carousel">
+					      		<?php while ( have_rows('quotes') ) : the_row(); ?>
+											<div>
+												<div class="quote"><?php echo get_sub_field('quote'); ?></div>
+												<div class="source"><?php echo get_sub_field('source'); ?></div>
+											</div>
+										<?php endwhile; ?>
+									</div>
+									<div class="text-center">
+										<div id="carousel-nav" class="carousel-nav"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					<?php } ?>
+				</div>
+		<?php } ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

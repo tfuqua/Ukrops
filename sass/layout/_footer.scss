@@ -44,6 +44,13 @@ footer {
     }
   }
 
+  .footer-nav{
+    @media(min-width: $screen-md-min) {
+      padding-right:0;
+      padding-left:30px;
+    }
+  }
+
   .footer-navigation {
 
     ul {
@@ -78,7 +85,7 @@ footer {
         }
 
         a {
-          font-size: 16px;
+          font-size: 15px;
           font-weight: 500;
           padding:15px 0;
           font-style: normal;

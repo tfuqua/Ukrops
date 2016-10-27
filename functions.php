@@ -118,6 +118,7 @@ function ukrops_scripts() {
   wp_enqueue_style( 'google-font-vollkorn', 'https://fonts.googleapis.com/css?family=Vollkorn', false);
 
 	wp_enqueue_script( 'ukrops-jquery', get_template_directory_uri() . '/js/jquery.min.js');
+	wp_enqueue_script( 'ukrops-slick', get_template_directory_uri() . '/js/slick.min.js');
 	wp_enqueue_script( 'ukrops-js', get_template_directory_uri() . '/js/index.js');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
