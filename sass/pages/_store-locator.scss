@@ -1,3 +1,9 @@
+.store-hero.hero{
+
+  min-height: auto;
+  max-height: 290px;
+}
+
 .search-column.col-md-3{
   float:none;
 
@@ -59,7 +65,8 @@ table.table.store-locator {
     > th {
       //border-bottom: 2px dashed rgba(192, 155, 113, 0.75);
       border: none;
-      font-size: 16px;
+      font-size: 18px;
+      text-transform: uppercase;
       font-weight: 500;
       font-style: normal;
       font-stretch: normal;
@@ -120,5 +127,56 @@ table.table.store-locator {
       width: 100%;
       height: auto;
     }
+  }
+}
+
+.dataTables_info {
+    float:left;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    color: #794400
+}
+
+.dataTables_paginate {
+  float:right;
+
+  a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    color: #c1311a;
+    border-radius: 3px;
+    height: 35px;
+    padding:0 10px;
+    margin-right: 2px;
+    line-height: 35px;
+
+    &.current{
+      border: 1px solid #bf311a;
+    }
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+      background-image: linear-gradient(to bottom, #db2c10, #bf311a);
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+      color:#fff;
+    }
+
+    &.disabled {
+      color:#c09b72;
+
+      &:hover{
+        background-image: none;
+        box-shadow: none;
+        cursor:not-allowed;
+        color:#c09b72;
+      }
+    }
+
   }
 }
