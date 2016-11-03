@@ -8119,19 +8119,20 @@ ul.social-icons {
       color: #fff; }
 
 .product-list {
-  padding: 65px 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; }
+  padding: 65px 0; }
+  @media (min-width: 520px) {
+    .product-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; } }
 
 .product-card-wrapper {
-  flex-basis: 100%;
-  display: flex;
-  flex-direction: column;
   padding: 0 15px 30px; }
   @media (min-width: 520px) {
     .product-card-wrapper {
-      flex-basis: 50%; } }
+      flex-basis: 50%;
+      display: flex;
+      flex-direction: column; } }
   @media (min-width: 900px) {
     .product-card-wrapper {
       flex-basis: 33%; } }

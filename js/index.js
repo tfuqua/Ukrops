@@ -26,7 +26,7 @@ $(function(){
     nextArrow: '<button type="button" class="slick-next carousel-btn">&gt;</button>',
     infinite: true,
     speed: 500,
-    //autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     fade: true,
     slidesToShow:1,
@@ -43,6 +43,13 @@ $(function(){
       infinite: true,
   });
 
+  $(".good-meadow-carousel").slick({
+      infinite: true,
+      arrows: false,
+      fade: true,
+      autoplay: true,
+      slidesToShow:1,
+  });
 
 });
 
