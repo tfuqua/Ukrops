@@ -37,7 +37,10 @@
         &:nth-child(3){
           border-bottom:1px dashed $header-border-color;
         }
-        &:nth-child(3), &:nth-child(4){
+        &:nth-child(4){
+          border-bottom:1px dashed $header-border-color;
+        }
+        &:nth-child(3), &:nth-child(4), &:nth-child(5){
           flex-basis: 100%;
 
           img {
@@ -61,7 +64,7 @@
     @media (min-width: $screen-md-min) {
       border-right:1px dashed $header-border-color;
       border-bottom: none !important;
-      flex-basis: 25% !important;
+      flex-basis: 20% !important;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -75,7 +78,7 @@
       img {
         width:auto;
         height:auto;
-        max-width:80%;
+        max-width:90%;
         max-height: 215px;
       }
     }

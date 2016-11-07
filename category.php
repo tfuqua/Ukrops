@@ -16,20 +16,21 @@ get_header(); ?>
 					<div class="col-md-9">
 						<?php
 						if ( have_posts() ) : ?>
-							<div class="page-header">
-								<?php
-									the_archive_title( '<h1 class="page-title">', '</h1>' );
-									the_archive_description( '<div class="archive-description">', '</div>' );
-								?>
-							</div><!-- .page-header -->
+						<div class="blog-cards">
 							<?php
-							while ( have_posts() ) : the_post();
-								get_template_part( 'templates/content', get_post_format() );
-							endwhile;
-							the_posts_navigation();
-						else :
-							get_template_part( 'templates/content', 'none' );
-						endif; ?>
+	              while ( have_posts() ) : the_post();
+									get_template_part( 'templates/blog-card', get_post_format());
+	              endwhile;
+	            ?>
+						</div>
+
+							<div class="pager text-center">
+								<?php previous_posts_link( '&#xab; Newer posts' );?>
+								<?php next_posts_link( 'Older Posts &#xbb;');?>
+							</div>
+            <?php else : ?>
+            <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+					<?php endif; ?>
 					</div>
 					<div class="col-md-3">
 						<br />

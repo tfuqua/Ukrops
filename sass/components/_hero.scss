@@ -149,6 +149,18 @@
   }
 }
 
+.hero {
+  .hero-text .hero-body {
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    color: #794400;
+    padding:10px 0;
+  }
+}
+
 .hero.mini-hero{
     margin-bottom: 50px;
     padding: 10px 0;
