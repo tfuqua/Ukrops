@@ -1,0 +1,92 @@
+.resumator-job{
+  border-bottom: dashed 2px #c09b72;
+  padding:25px 0 !important;
+}
+
+.resumator-job-title {
+  font-family: "Gotham SSm A", "Gotham SSm B", $font-family-sans-serif !important;
+  font-size: 40px !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  line-height: 1.2 !important;
+  color: #c1311a !important;
+  border-top:none !important;
+}
+.resumator-job-info-details, .resumator-job-info {
+  font-family: "Gotham SSm A", "Gotham SSm B", $font-family-sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  color: #794400 !important;
+  margin-right:50px !important;
+
+  .resumator-job-location.resumator-job-heading{
+    display: none;
+  }
+}
+.resumator-job-link.resumator-jobs-text {
+  font-family: "Gotham SSm A", "Gotham SSm B", $font-family-sans-serif !important;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  color: #c1311a;
+}
+
+.resumator-job-info-details.resumator-jobs-text{
+  > span {
+    display: inline-block;
+    padding-left:50px;
+  }
+
+  .resumator-job-heading{
+    display: none;
+  }
+}
+.resumator-job-description-text,
+.resumator-job-description li, .resumator-job-description p {
+  font-family: "Gotham SSm A", "Gotham SSm B", $font-family-sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  color: #794400;
+}
+.resumator-job-description p{
+  margin-bottom: 5px !important;
+}
+
+.resumator-apply-button {
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom, #db2c10, #bf311a);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+
+  font-family: "Gotham SSm A", "Gotham SSm B", $font-family-sans-serif !important;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: center;
+  color: #ffffff;
+  outline:none;
+  border:none;
+  padding:15px 25px;
+}
+.resumator-buttons{
+    ul li{
+
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5){
+        display: none;
+      }
+    }
+}
+.resumator-forward-button {
+  //display: none;
+}

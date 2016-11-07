@@ -128,7 +128,7 @@ function ukrops_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'ukrops_scripts' );
 
-require_once('my_walker.php');
+require_once('menu_walker.php');
 
 add_action( 'pre_get_posts', 'my_change_sort_order');
 function my_change_sort_order($query){
