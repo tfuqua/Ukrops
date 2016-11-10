@@ -1,9 +1,8 @@
 
 <div class="blog-card">
 	<div class="blog-img">
-			<?php if ( has_post_thumbnail() ) : ?>
-				<?php the_post_thumbnail(); ?>
-			<?php endif; ?>
+		<?php $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full' );?>
+		<div class="img-div" style="background-image: url('<?php echo $thumb['0'];?>')"></div>
 	</div>
 	<div class="blog-info">
 		<div class="blog-info-wrapper">

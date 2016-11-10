@@ -1,0 +1,44 @@
+.cook-card{
+  padding:40px 0;
+
+  .cook-img{
+    @media (min-width: $screen-md-min) {
+      float:left;
+      padding: 0 15px 15px 0;
+    }
+  }
+
+  .cook-blurb{
+
+    h3{
+      margin:0 0 10px;
+      font-size: 36px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      color: #c09b72;
+    }
+
+    h4{
+      font-size: 26px;
+      font-weight: 400;
+      font-style: normal;
+      font-stretch: normal;
+      color: #794400;
+    }
+  }
+
+  .blurb{
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    color: #794400;
+    margin-bottom: 25px;
+  }
+
+  .buttons{
+    clear:both;
+  }
+}

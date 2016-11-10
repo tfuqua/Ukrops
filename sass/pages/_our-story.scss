@@ -1,0 +1,119 @@
+.ukrops-family{
+
+  position: relative;
+  margin:50px 0 0;
+  padding-bottom:50px;
+  background-position: top left;
+  background-repeat: repeat;
+  background: url('images/cream.png');
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    color: #c1311a;
+    margin: 0;
+    padding: 50px 0;
+    position: relative;
+
+    span {
+      padding:0 5px;
+      background: url('images/cream.png') left repeat-x;
+      position: relative;
+    }
+
+    &:before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      top:75px;
+      left:0;
+      height: 1px;
+      opacity: 0.57;
+      border: dashed 1px #c09b72;
+    }
+  }
+
+  h3 {
+    font-size: 36px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    color: #c09b72;
+  }
+}
+
+.brands {
+  padding-bottom: 50px;
+
+  @media (min-width: $screen-sm-min) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .brand-item{
+    padding:10px 15px;
+
+    @media (min-width: $screen-sm-min) {
+      flex-basis: 50%;
+    }
+
+    @media (min-width: $screen-md-min) {
+      flex-basis: 25%;
+    }
+
+    flex:1;
+    display: flex;
+    flex-direction: column;
+
+    .brand-img{
+
+      height: 200px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 80%;
+        height: auto;
+        max-height: 100%;
+        display: block;
+        margin:0 auto;
+      }
+    }
+
+    .brand-content{
+      flex:1;
+    }
+
+    &:nth-child(1),
+    &:nth-child(4){
+      .brand-img img {
+        width:60%;
+      }
+    }
+
+    a {
+      font-size: 18px;
+      font-weight: 400;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.5;
+      color: #c1311a;
+    }
+  }
+}

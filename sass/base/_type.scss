@@ -12,7 +12,29 @@ main {
   font-stretch: normal;
   line-height: 1.5;
   color: #794400;
+
+  .alignright{
+    float:right;
+    display: block;
+    margin-left:15px;
+  }
+  .alignleft{
+    float:left;
+    display: block;
+    margin-right:15px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+
+    &.aligncenter{
+      display: block;
+      margin: 30px auto;
+    }
+  }
 }
+
 
 h1, h2, h3 {
   font-weight: 500;

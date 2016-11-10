@@ -19,6 +19,15 @@ $(function(){
 });
 
 $(function(){
+  $("#video-toggle").click(function(){
+    $("#videoModal").toggleClass("open in");
+  });
+  $("#video-close").click(function(){
+    $("#videoModal").removeClass("open in");
+  });
+});
+
+$(function(){
 
   //init carousels
   $(".product-carousel").slick({

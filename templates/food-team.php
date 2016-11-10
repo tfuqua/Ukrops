@@ -1,21 +1,9 @@
 <?php
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package ukrops
- */
+/* Template Name: Food Team */
 
 get_header(); ?>
-
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main padded" role="main">
+		<main id="main" class="site-main" role="main">
 
 			<!-- Hero Image -->
 	    <?php if(get_field('hero_image')) { ?>
@@ -50,18 +38,45 @@ get_header(); ?>
 			 }?>
 
 
-			<div class="container-fluid">
 				<?php
 				while ( have_posts() ) : the_post();
-					get_template_part( 'templates/content', 'page' );
+        $pageID = get_the_ID(); ?>
 
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
+		      <div class="container-fluid">
+		        <div class="row">
+		          <div class="col-sm-7 col-md-8">
+        				<?php the_content();?>
 
-				endwhile; // End of the loop.
-				?>
+								<div class="team-list">
+		              <?php
+		               $args = array(
+		              	'sort_order' => 'asc',
+		              	'sort_column' => 'ID',
+		              	'parent' => $pageID,
+		              	'post_type' => 'page',
+		              );
+
+		              $pages = get_pages($args);
+
+		              foreach ($pages as $page){
+		                $post = $page;
+		                setup_postdata( $post );
+		                get_template_part( '/templates/cook-card', get_post_format());
+
+		                wp_reset_postdata();
+		              }
+		              ?>
+		            </div>
+		          </div>
+							<div class="col-sm-4 col-md-3 col-sm-push-1 col-md-push-1 hidden-xs">
+		            <?php
+		            get_sidebar('cooks');
+		            ?>
+		          </div>
+						<?php
+    				endwhile; // End of the loop.
+    				?>
+        </div>
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -68,6 +68,7 @@ function ukrops_sidebar_init() {
 }
 add_action( 'widgets_init', 'ukrops_sidebar_init' );
 
+/*
 function create_product_taxonomy() {
 	$labels = array(
 		'name'                           => 'Products',
@@ -102,14 +103,21 @@ function create_product_taxonomy() {
 	flush_rewrite_rules();
 }
 
-add_action( 'init', 'create_product_taxonomy' );
+add_action( 'init', 'create_product_taxonomy' );*/
 
 //This method helps keep get_excerpt() to 5 lines
 function custom_excerpt_length( $length ) {
-	return 22;
+	return 25;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+add_filter( 'body_class', 'custom_class' );
+function custom_class( $classes ) {
+    if (!is_main_site()) {
+        $classes[] = 'child-site';
+    }
+    return $classes;
+}
 /**
  * Enqueue scripts and styles.
  */
@@ -128,7 +136,13 @@ function ukrops_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'ukrops_scripts' );
 
-require_once('menu_walker.php');
+function change_wp_search_size($queryVars) {
+	if ( isset($_REQUEST['s']) ) // Make sure it is a search page
+		$queryVars['posts_per_page'] = 5;
+	return $queryVars; // Return our modified query variables
+}
+add_filter('request', 'change_wp_search_size'); // Hook our custom function onto the request filter
+
 
 add_action( 'pre_get_posts', 'my_change_sort_order');
 function my_change_sort_order($query){
@@ -140,3 +154,5 @@ function my_change_sort_order($query){
      $query->set( 'orderby', 'menu_order' );
   endif;
 };
+
+require_once('menu_walker.php');

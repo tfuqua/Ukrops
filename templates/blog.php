@@ -35,7 +35,7 @@ get_header(); ?>
 
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-9">
+          <div class="col-sm-8 col-md-9">
             <?php
             // The Query
             $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
@@ -52,7 +52,7 @@ get_header(); ?>
 	              while ( have_posts() ) : the_post();
 									get_template_part( 'templates/blog-card', get_post_format());
 	              endwhile;
-	            ?>							
+	            ?>
 						</div>
 
 							<div class="pager text-center">
@@ -66,7 +66,7 @@ get_header(); ?>
             // Reset Query
             wp_reset_query(); ?>
           </div>
-          <div class="col-md-3 hidden-sm hidden-xs">
+          <div class="col-sm-4 col-md-3 hidden-xs">
             <?php get_sidebar('categories');?>
           </div>
         </div>

@@ -1,0 +1,15 @@
+.full-width-content{
+  font-size: 18px;
+  overflow: hidden;
+
+  img {
+
+    height: auto;
+    width: auto;
+    max-width: none;
+
+    @media (min-width: $screen-md-min) {
+      width: 100%;
+    }
+  }
+}

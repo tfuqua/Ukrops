@@ -1,0 +1,64 @@
+.hero.hero-dark{
+
+  background-position: top right;
+  padding:25px 0 50px;
+  margin-bottom: 50px;
+
+  @media (min-width: $screen-md-min) {
+    padding:125px 0;
+  }
+
+  &.bottom {
+    margin-bottom: 0;
+  }
+
+  .hero-heading {
+    font-size: 28px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom:30px;
+    margin-bottom: 30px;
+    position: relative;
+
+    &:after {
+      content: "";
+      width:165px;
+      height: 0;
+      position: absolute;
+      bottom:0;
+      left:50%;
+      margin-left:-82px;
+      border-bottom: dashed 2px #c09b72;
+    }
+
+  }
+
+  .hero-body{
+    max-width: 1080px;
+    margin: 0 auto;
+    font-family: 'Vollkorn', serif;
+    font-size: 28px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: -0.2px;
+    text-align: center;
+    color: #ffffff;
+
+    @media (min-width: $screen-md-min) {
+      font-size: 40px;
+    }
+  }
+
+
+  .hero-button{
+    padding-top: 30px;
+    text-align: center;
+  }
+}

@@ -48,7 +48,7 @@ get_header(); ?>
             </div>
           </div>
           <div class="col-md-2 col-md-push-1 hidden-sm hidden-xs">
-            <h3>Sub Menu goes here</h3>
+            
           </div>
         </div>
       </div>

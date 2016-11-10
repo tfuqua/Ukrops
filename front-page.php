@@ -19,7 +19,7 @@ get_header(); ?>
          <div class="hero-text-wrapper">
            <div>
              <div class="hero-text">
-               <?php echo get_field('hero_text')?>
+               <?php echo get_field('hero_heading')?>
                <?php if(get_field('button_text')) { ?>
                <div class="hero-button">
                  <a href="<?php echo get_field('button_link')?>"><?php echo get_field('button_text')?></a>
@@ -33,10 +33,10 @@ get_header(); ?>
 
     <!-- Branding -->
     <?php
-      if( have_rows('brand') ) { ?>
+      if( have_rows('brands') ) { ?>
         <div class="branding">
           <div class="container-fluid">
-            <?php while ( have_rows('brand') ) : the_row(); ?>
+            <?php while ( have_rows('brands') ) : the_row(); ?>
                 <div class="brand-item">
                   <a href="<?php echo get_sub_field('brand_link')?>">
                     <?php if (get_sub_field('brand_logo') != '') {

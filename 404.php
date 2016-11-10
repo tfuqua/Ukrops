@@ -1,43 +1,36 @@
 <?php
-/**
- * The template for displaying 404 pages (not found).
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package ukrops
- */
-
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<div class="container-fluid">
-				<section class="error-404 not-found">
-					<div class="page-headers">
-						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'ukrops' ); ?></h1>
-					</div><!-- .page-header -->
 
-					<div class="page-content">
-						<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'ukrops' ); ?></p>
+      <?php
+			$background =  get_template_directory_uri() . '/images/404.jpg';
+			?>
+	     <div class="hero mini-hero" style="background-image: url('<?php echo $background ?>');">
+        <div class="hero-text-wrapper">
+          <div>
+            <div class="hero-text">
+            	404 Page Not Found
+            </div>
+          </div>
+        </div>
+      </div>
 
-						<?php
-							get_search_form();
 
-							the_widget( 'WP_Widget_Recent_Posts' );
-
-							/* translators: %1$s: smiley */
-							$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'ukrops' ), convert_smilies( ':)' ) ) . '</p>';
-							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-							the_widget( 'WP_Widget_Tag_Cloud' );
-						?>
-
-					</div><!-- .page-content -->
-				</section><!-- .error-404 -->
-
+		<div class="container-fluid not-found">
+			<h2>
+				We’re sorry, the page you were looking for could not be found.
+			</h2>
+			<div>
+				Please visit the homepage to try again. <br /><br />
+				<a class="link" href="<?php echo site_url() ?>">
+					&#xab; Return Home
+				</a>
 			</div>
+		</div>
 		</main><!-- #main -->
-	</div><!-- #primary -->
+	</section><!-- #primary -->
 
 <?php
 get_footer();
