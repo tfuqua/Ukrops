@@ -1,6 +1,4 @@
   header {
-  float:left;
-  width:100%;
   position: relative;
   text-align: center;
   background: $header-bg;
@@ -26,15 +24,19 @@
       @media (min-width: $screen-md-min) {
         padding:0 15px;
         min-height: 75px;
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include justify-content(space-between);
+        width:100%;
       }
   }
 
   .brand{
       padding-left:10px;
-      float:left;
 
       @media (min-width: $screen-md-min) {
         padding-left:0;
+        height:75px;
       }
 
     img {

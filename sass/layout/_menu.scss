@@ -4,10 +4,13 @@
   @media (min-width: $screen-md-min) {
     display: block;
     position: relative;
-    float:left;
     padding-left:15px;
     padding-right:65px;
   }
+}
+
+.child-site .nav-wrapper{
+  padding-right:0px;
 }
 
 @media (max-width: $screen-sm-max) {
@@ -42,7 +45,6 @@ nav.main-navigation .menu-main-nav-container {
     max-width: 320px;
 
     @media (min-width: $screen-md-min) {
-      float:right;
       max-width: none;
     }
 
@@ -52,7 +54,7 @@ nav.main-navigation .menu-main-nav-container {
       padding:0;
 
       @media (min-width: $screen-md-min) {
-        float:left;
+        display: inline-block;
       }
 
       a {

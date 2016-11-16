@@ -14,12 +14,13 @@
   padding:0 15px 30px;
 
   @media (min-width: $screen-sm-min) {
-    @include flex(1 0 50%);
+    @include flexbox();
+    @include flex(0 1 50%);
     @include flex-direction(column);
   }
 
   @media (min-width: $screen-md-min) {
-    @include flex(1 0 33%);
+    @include flex(0 1 33%);
   }
 }
 
@@ -37,11 +38,14 @@
     overflow: hidden;
     border-top-right-radius:7px;
     border-top-left-radius: 7px;
+    height: 250px;
+    background-repeat: no-repeat;
 
-    img{
-      width:100%;
-      height: auto;
-    }
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: top center;
   }
 
   .product-section{
@@ -76,10 +80,13 @@
     overflow: hidden;
     padding:10px 30px 30px;
 
-      a {
-        display: block;
-        margin-top:10px;
+    a {
+      display: block;
+      margin-top:10px;
+    }
 
+    &.two-buttons{
+      a {
         @media (min-width: $screen-md-min) {
           float:left;
           width:48%;
@@ -97,5 +104,6 @@
           }
         }
       }
+    }
   }
 }
