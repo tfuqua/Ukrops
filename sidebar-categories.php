@@ -1,4 +1,4 @@
-<div class="sidebar-categories">
+<div class="sidebar-categories sidebar">
   <h3>Categories</h3>
   <ul>
     <?php
@@ -12,5 +12,5 @@
     <?php
     }
     ?>
-  </ul>  
+  </ul>
 </div>

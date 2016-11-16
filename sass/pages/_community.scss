@@ -25,20 +25,20 @@
 
   .partner-imgs{
     @media (min-width: $screen-sm-min) {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      @include flexbox();
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
     }
 
     .partner-img{
       padding:30px;
 
       @media (min-width: $screen-sm-min) {
-        flex-basis: 50%;
+        @include flex-basis(50%);
       }
 
       @media (min-width: $screen-md-min) {
-        flex-basis: 33%;
+        @include flex-basis(33%);
       }
 
       img{

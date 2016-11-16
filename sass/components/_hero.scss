@@ -42,10 +42,12 @@
     line-height: 1.33;
     color: #c1311a;
     font-weight: 300;
+    border-radius: 4px;
 
     width:90%;
     margin:30px 5%;
-    padding:20px;
+    padding:40px 40px;
+
     background-color:rgba(255, 255, 255, 0.95);
 
     @media (min-width: $screen-sm-min) {
@@ -59,7 +61,7 @@
     }
 
     @media (min-width: $screen-lg-min) {
-      width:40%;
+      width:50%;
     }
 
     .hero-button {
@@ -100,21 +102,10 @@
     color: #c1311a;
     padding:50px;
     width: 90%;
-    border-radius: 4px;
+    @include border-radius(4px);
 
     @media (min-width: $screen-md-min) {
       width:60%;
-    }
-
-
-    .hero-body{
-      margin-top: 15px;
-      font-size: 18px;
-      font-weight: 400;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 1.5;
-      color: #794400;
     }
   }
 }
@@ -125,15 +116,6 @@
   background-position: top;
 
   .hero-text{
-    background:rgba(255, 255, 255, .95);
-    border-radius: 4px;
-    font-size: 18px;
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.5;
-    color: #794400;
-
     @media (min-width: $screen-md-min) {
       width:60%;
     }

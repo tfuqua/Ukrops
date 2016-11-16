@@ -61,9 +61,9 @@
 }
 
 .resumator-apply-button {
-  border-radius: 5px;
+  @include border-radius(5px);
+  @include box-shadow(0 0 4px 0 rgba(0, 0, 0, 0.1));
   background-image: linear-gradient(to bottom, #db2c10, #bf311a);
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
 
   font-family: "Gotham SSm A", "Gotham SSm B", $font-family-sans-serif !important;
   font-size: 18px;

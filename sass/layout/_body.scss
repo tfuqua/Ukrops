@@ -1,15 +1,25 @@
 html{
-
+  height: 100%;
 }
+
 body{
-  display: flex; // Sticky Footer
-  min-height: 100vh;
-  flex-direction: column;
+  /*@include flexbox();
+  @include flex-direction(column);
+
+  min-height: 100vh;*/
+
+  &.ie{
+    /*min-height: 100%;
+    height: auto!important;
+    height: 100%;*/
+  }
 }
 .site-content { // Sticky Footer
-  flex: 1;
+  //@include flex();
 }
-
+header, footer{
+  //@include flex-shrink(0);
+}
 .container-fluid{
   max-width: $max-site-width;
   width:100%;

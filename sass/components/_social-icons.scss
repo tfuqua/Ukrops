@@ -13,8 +13,8 @@ ul.social-icons {
     display:inline-block;
     margin: 0 5px;
     a {
+      @include border-radius(50%);
       display: block;
-      border-radius: 50%;
       width: 45px;
       height: 45px;
       text-align: center;

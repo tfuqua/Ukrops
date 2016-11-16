@@ -30,7 +30,6 @@
 			</div>
 		</div>
 	</footer>
-</div><!-- #content -->
 
 <?php wp_footer(); ?>
 

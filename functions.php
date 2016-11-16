@@ -68,42 +68,6 @@ function ukrops_sidebar_init() {
 }
 add_action( 'widgets_init', 'ukrops_sidebar_init' );
 
-/*
-function create_product_taxonomy() {
-	$labels = array(
-		'name'                           => 'Products',
-		'singular_name'                  => 'Product',
-		'search_items'                   => 'Search Products',
-		'all_items'                      => 'All Products',
-		'edit_item'                      => 'Edit Product',
-		'update_item'                    => 'Update Product',
-		'add_new_item'                   => 'Add New Product',
-		'new_item_name'                  => 'New Product Name',
-		'menu_name'                      => 'Products',
-		'view_item'                      => 'View Product',
-		'popular_items'                  => 'Popular Product',
-		'separate_items_with_commas'     => 'Separate products with commas',
-		'add_or_remove_items'            => 'Add or remove products',
-		'choose_from_most_used'          => 'Choose from the most used products',
-		'not_found'                      => 'No products found'
-	);
-
-	register_taxonomy(
-		'product',
-		'page',
-		array(
-			'label' => __( 'Product' ),
-			'hierarchical' 	=> true,
-      'with_front'    => true,
-			'slug' 					=> 'products',
-			'labels' 				=> $labels
-		)
-	);
-
-	flush_rewrite_rules();
-}
-
-add_action( 'init', 'create_product_taxonomy' );*/
 
 //This method helps keep get_excerpt() to 5 lines
 function custom_excerpt_length( $length ) {
@@ -111,13 +75,36 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-add_filter( 'body_class', 'custom_class' );
-function custom_class( $classes ) {
+add_filter( 'body_class', 'custom_body_class' );
+
+function custom_body_class( $classes ) {
     if (!is_main_site()) {
         $classes[] = 'child-site';
     }
-    return $classes;
+		
+		global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
+		if($is_lynx) $classes[] = 'lynx';
+		elseif($is_gecko) $classes[] = 'gecko';
+		elseif($is_opera) $classes[] = 'opera';
+		elseif($is_NS4) $classes[] = 'ns4';
+		elseif($is_safari) $classes[] = 'safari';
+		elseif($is_chrome) $classes[] = 'chrome';
+		elseif($is_IE) {
+						$classes[] = 'ie';
+						if(preg_match('/MSIE ([0-9]+)([a-zA-Z0-9.]+)/', $_SERVER['HTTP_USER_AGENT'], $browser_version))
+						$classes[] = 'ie'.$browser_version[1];
+		} else $classes[] = 'unknown';
+		if($is_iphone) $classes[] = 'iphone';
+		if ( stristr( $_SERVER['HTTP_USER_AGENT'],"mac") ) {
+						 $classes[] = 'osx';
+			 } elseif ( stristr( $_SERVER['HTTP_USER_AGENT'],"linux") ) {
+						 $classes[] = 'linux';
+			 } elseif ( stristr( $_SERVER['HTTP_USER_AGENT'],"windows") ) {
+						 $classes[] = 'windows';
+			 }
+		return $classes;
 }
+
 /**
  * Enqueue scripts and styles.
  */
@@ -137,11 +124,11 @@ function ukrops_scripts() {
 add_action( 'wp_enqueue_scripts', 'ukrops_scripts' );
 
 function change_wp_search_size($queryVars) {
-	if ( isset($_REQUEST['s']) ) // Make sure it is a search page
+	if ( isset($_REQUEST['s']) )
 		$queryVars['posts_per_page'] = 5;
-	return $queryVars; // Return our modified query variables
+	return $queryVars;
 }
-add_filter('request', 'change_wp_search_size'); // Hook our custom function onto the request filter
+add_filter('request', 'change_wp_search_size');
 
 
 add_action( 'pre_get_posts', 'my_change_sort_order');

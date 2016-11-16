@@ -55,15 +55,15 @@
 
 		<div class="nav-wrapper">
 
-				<div id="searchForm" class="search-form">
-					<button id="searchToggle" class="search-toggle">
-						<i class="fa fa-search"></i>
-					</button>
+			<div id="searchForm" class="search-form">
+				<button id="searchToggle" class="search-toggle">
+					<i class="fa fa-search"></i>
+				</button>
 
-					<div class="search-fields">
-						<?php get_search_form(); ?>
-					</div>
+				<div class="search-fields">
+					<?php get_search_form(); ?>
 				</div>
+			</div>
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php

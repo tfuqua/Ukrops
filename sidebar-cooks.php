@@ -1,4 +1,4 @@
-<div class="sidebar-cooks">
+<div class="sidebar-cooks sidebar">
 
   <h3><span><?php echo the_title() ?></span></h3>
 

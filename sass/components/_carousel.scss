@@ -1,5 +1,4 @@
 .product-carousel{
-  //border:1px solid #ccc;
   position: relative;
 
   &:after {
@@ -152,7 +151,6 @@
         display: block;
         border: 1px solid #fff;
 
-        //hide text
         font-size: 1px;
         text-indent: 999px;
         white-space: nowrap;

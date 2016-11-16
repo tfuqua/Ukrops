@@ -46,13 +46,14 @@
   text-align: center;
 
     a, span {
+      @include border-radius(3px);
+
       display: inline-block;
       font-size: 16px;
       font-weight: 400;
       font-style: normal;
       font-stretch: normal;
       color: #c1311a;
-      border-radius: 3px;
       height: 35px;
       padding:0 10px;
       margin-right: 2px;
@@ -63,10 +64,10 @@
       }
 
       &:hover {
+        @include box-shadow(0 0 4px 0 rgba(0, 0, 0, 0.1));
         cursor: pointer;
         text-decoration: none;
         background-image: linear-gradient(to bottom, #db2c10, #bf311a);
-        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
         color:#fff;
       }
 
@@ -74,8 +75,8 @@
         color:#c09b72;
 
         &:hover{
+          @include box-shadow(none);
           background-image: none;
-          box-shadow: none;
           cursor:not-allowed;
           color:#c09b72;
         }

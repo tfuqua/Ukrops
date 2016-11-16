@@ -10,8 +10,6 @@ get_header(); ?>
 <div id="primary" class="content-area">
   <main id="main" class="site-main" role="main">
 
-    <div class="brand-wrapper">
-
     <!-- Hero Image -->
     <?php if(get_field('hero_image')) { ?>
       <?php $background = wp_get_attachment_image_src(get_field('hero_image'), 'full', false); ?>
@@ -35,21 +33,21 @@ get_header(); ?>
     <?php
       if( have_rows('brands') ) { ?>
         <div class="branding">
-          <div class="container-fluid">
+          <div class="brand-container">
             <?php while ( have_rows('brands') ) : the_row(); ?>
                 <div class="brand-item">
-                  <a href="<?php echo get_sub_field('brand_link')?>">
-                    <?php if (get_sub_field('brand_logo') != '') {
-                      echo wp_get_attachment_image(get_sub_field('brand_logo'), 'full', false, array( 'class' => '') );
-                    } ?>
-                  </a>
+                  <div>
+                    <a href="<?php echo get_sub_field('brand_link')?>">
+                      <?php if (get_sub_field('brand_logo') != '') {
+                        echo wp_get_attachment_image(get_sub_field('brand_logo'), 'full', false, array( 'class' => '') );
+                      } ?>
+                    </a>
+                  </div>
                 </div>
             <?php endwhile; ?>
           </div>
         </div>
-
     <?php } ?>
-    </div>
 
     <!-- Featured Content -->
     <?php
@@ -108,7 +106,7 @@ get_header(); ?>
                       <?php the_excerpt() ?>
                     </div>
                     <div class="featured-button">
-                      <a href="#">
+                      <a class="button" href="<?php echo get_permalink(); ?>">
                         <?php echo the_sub_field('button_text') ?>
                       </a>
                     </div>

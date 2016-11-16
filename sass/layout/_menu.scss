@@ -3,6 +3,10 @@
 
   @media (min-width: $screen-md-min) {
     display: block;
+    position: relative;
+    float:left;
+    padding-left:15px;
+    padding-right:65px;
   }
 }
 
@@ -60,19 +64,27 @@ nav.main-navigation .menu-main-nav-container {
         padding: 17px 10px 17px 10px;
         font-weight: 500;
 
+        &:hover,
+        &:active,
+        &:focus{
+          text-decoration: none;
+        }
+
         @media (min-width: $screen-md-min) {
-          //padding:19px 15px 17px;
           padding: 0 15px;
+          font-size:14px;
           min-height: 75px;
           line-height: 75px;
           border-left: 1px dashed $menu-link-border-color;
           border-bottom: none;
         }
+        @media (min-width: $screen-lg-min) {
+          font-size: 16px;
+        }
       }
       &:last-child > a {
         @media (min-width: $screen-md-min) {
           border-right: 1px dashed $menu-link-border-color;
-          //border-left:none;
         }
       }
 
