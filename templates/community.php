@@ -52,8 +52,10 @@ get_header(); ?>
 							<div class="container-fluid">
 								<?php while ( have_rows('community_events') ) : the_row(); ?>
 										<div class="featured-item">
-											<div class="img-wrapper">
-												<?php echo wp_get_attachment_image(get_sub_field('image'), 'medium', false, array( 'class' => ''));?>
+											<?php
+												$background = wp_get_attachment_image_src(get_sub_field('image'), 'full', false);
+											?>
+											<div class="img-wrapper" style="background-image: url('<?php echo $background[0] ?>');">
 											</div>
 											<div class="featured-section">
 												<h3><?php echo the_sub_field('header');?></h3>

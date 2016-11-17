@@ -32,21 +32,14 @@
       &:last-child{ margin-bottom: -35px; }
 
       .img-wrapper {
-        @media (min-width: $screen-md-min) {
-          height: 300px;
-          overflow: hidden;
-        }
-      }
+        height: 300px;
+        background-repeat: no-repeat;
 
-      img {
-        min-width: 100%;
-        max-width: none;
-        height:auto;
-
-        @media (min-width: $screen-md-min) {
-          min-height: 100%;
-          width: auto;
-        }
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        background-size: cover !important;
+        background-position: top center !important;
       }
 
       @media (min-width: $screen-md-min) {

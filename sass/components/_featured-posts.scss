@@ -45,16 +45,18 @@
       }
     }
 
-    .featured-thumbnail {
+    .featured-thumbnail{
       @include border-radius(7px);
+      margin:0px;
       overflow: hidden;
+      height: 200px;
+      background-repeat: no-repeat;
 
-      img {
-        @include border-radius(7px);
-        width:auto;
-        min-width: 100%;
-        height:auto;
-      }
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-position: top center;
     }
 
     .featured-title {

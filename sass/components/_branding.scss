@@ -13,7 +13,8 @@
     padding:0;
     margin: 0 auto;
     @include flexbox();
-    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include flex-flow(wrap);
   }
 
   .brand-item{
@@ -78,18 +79,25 @@
       border-right:1px dashed $header-border-color;
       border-bottom: none !important;
 
-      @include flex();
-      @include flex-basis(20%);
+      @include flexbox();
+      @include flex(0 0 20%);
+      @include flex-direction(column);
+      @include align-items(center);
+      @include justify-content(center);
 
-      > div {
+      max-width: 20%;
+      overflow: hidden;
 
+      &:nth-child(1), &:nth-child(2){
         img {
-          display: block;
-          width:auto;
-          height:auto;
-          max-width:90%;
-          max-height: 215px;
+          width:70%;
         }
+      }
+
+      img {
+        width:auto;
+        height:auto;
+        width:90%
       }
     }
   }

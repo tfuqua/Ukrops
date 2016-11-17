@@ -36,13 +36,11 @@ get_header(); ?>
           <div class="brand-container">
             <?php while ( have_rows('brands') ) : the_row(); ?>
                 <div class="brand-item">
-                  <div>
                     <a href="<?php echo get_sub_field('brand_link')?>">
                       <?php if (get_sub_field('brand_logo') != '') {
                         echo wp_get_attachment_image(get_sub_field('brand_logo'), 'full', false, array( 'class' => '') );
                       } ?>
                     </a>
-                  </div>
                 </div>
             <?php endwhile; ?>
           </div>
@@ -56,8 +54,10 @@ get_header(); ?>
           <div class="container-fluid">
             <?php while ( have_rows('featured_content') ) : the_row(); ?>
                 <div class="featured-item">
-                  <div class="img-wrapper">
-                    <?php echo wp_get_attachment_image(get_sub_field('image'), 'medium', false, array( 'class' => 'lazy-load'));?>
+                  <?php
+                    $background = wp_get_attachment_image_src(get_sub_field('image'), 'full', false);
+                  ?>
+                  <div class="img-wrapper" style="background-image: url('<?php echo $background[0] ?>');">
                   </div>
                   <div class="featured-section">
                     <h3><?php echo the_sub_field('heading');?></h3>
@@ -90,14 +90,12 @@ get_header(); ?>
                   $post = $post_object;
                   setup_postdata( $post ); ?>
 
-                  <div class="featured-thumbnail">
-                    <?php if ( has_post_thumbnail() ) {
-                        the_post_thumbnail('medium');
-                    } else if (get_sub_field('post_image') != '') { ?>
-                      <?php echo wp_get_attachment_image(get_sub_field('post_image'), 'medium', false, array( 'class' => 'lazy-load') );?>
-                    <?php
-                    }?>
-                  </div>
+                  <?php
+              			$background = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full', false);
+              		?>
+              		<div class="featured-thumbnail" style="background-image: url('<?php echo $background[0] ?>');">
+              		</div>
+
                   <div class="featured-post-content">
                     <div class="featured-title">
                       <?php the_title();?>

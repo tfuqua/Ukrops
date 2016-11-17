@@ -4,7 +4,7 @@
   @media (min-width: $screen-md-min) {
     display: block;
     position: relative;
-    padding-left:15px;
+    padding-left:5px;
     padding-right:65px;
   }
 }
@@ -73,7 +73,7 @@ nav.main-navigation .menu-main-nav-container {
         }
 
         @media (min-width: $screen-md-min) {
-          padding: 0 15px;
+          padding: 0 10px;
           font-size:14px;
           min-height: 75px;
           line-height: 75px;
@@ -81,7 +81,7 @@ nav.main-navigation .menu-main-nav-container {
           border-bottom: none;
         }
         @media (min-width: $screen-lg-min) {
-          font-size: 16px;
+          font-size: 14px;
         }
       }
       &:last-child > a {
