@@ -33,6 +33,10 @@
     .partner-img{
       padding:30px;
 
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+
       @media (min-width: $screen-sm-min) {
         @include flex-basis(50%);
       }
@@ -42,10 +46,12 @@
       }
 
       img{
-        width: 70%;
+        @include flex(0 0 auto);
+        width:75%;
+        /*width: 70%;
         display: block;
         margin: 0 auto;
-        height: auto;
+        height: auto;*/
       }
     }
   }

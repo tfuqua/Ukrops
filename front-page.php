@@ -101,7 +101,7 @@ get_header(); ?>
                       <?php the_title();?>
                     </div>
                     <div class="featured-description">
-                      <?php the_excerpt() ?>
+                      <?php excerpt('30') ?>
                     </div>
                     <div class="featured-button">
                       <a class="button" href="<?php echo get_permalink(); ?>">

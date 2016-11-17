@@ -71,7 +71,7 @@ add_action( 'widgets_init', 'ukrops_sidebar_init' );
 
 //This method helps keep get_excerpt() to 5 lines
 function custom_excerpt_length( $length ) {
-	return 25;
+	return 100;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -81,7 +81,7 @@ function custom_body_class( $classes ) {
     if (!is_main_site()) {
         $classes[] = 'child-site';
     }
-		
+
 		global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
 		if($is_lynx) $classes[] = 'lynx';
 		elseif($is_gecko) $classes[] = 'gecko';
@@ -143,3 +143,11 @@ function my_change_sort_order($query){
 };
 
 require_once('menu_walker.php');
+
+function excerpt($num) {
+    $limit = $num+1;
+    $excerpt = explode(' ', get_the_excerpt(), $limit);
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt)."...";
+    echo $excerpt;
+}
