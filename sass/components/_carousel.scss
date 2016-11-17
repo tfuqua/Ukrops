@@ -64,13 +64,17 @@
   max-width: 1200px;
   margin: 0 auto;
 
-  font-size: 33px;
+  font-size: 26px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.52;
   letter-spacing: -0.2px;
   color: #ffffff;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 34px;
+  }
 
   .quote{
     font-family: 'Vollkorn', serif;

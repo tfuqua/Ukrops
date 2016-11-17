@@ -46,7 +46,7 @@ h1, h2, h3 {
 blockquote {
   position: relative;
   font-family: 'Vollkorn', serif;
-  font-size: 40px;
+  font-size: 28px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -70,5 +70,18 @@ blockquote {
   &:after{
     top:auto;
     bottom:0;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .col-md-10 blockquote {
+    font-size:40px;
+    margin: 0 -8.333333333333% 20px;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .col-lg-8 blockquote {
+    margin: 0 -16.6666666667% 20px;  
   }
 }
