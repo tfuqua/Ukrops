@@ -34,7 +34,7 @@ $(function(){
     prevArrow: '<button type="button" class="slick-prev carousel-btn">&lt;</button>',
     nextArrow: '<button type="button" class="slick-next carousel-btn">&gt;</button>',
     infinite: true,
-    speed: 500,
+    speed: 2000,
     autoplay: true,
     autoplaySpeed: 2000,
     fade: true,

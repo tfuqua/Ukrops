@@ -8,7 +8,7 @@
 		<div class="blog-info-wrapper">
 			<h3><?php the_title(); ?></h3>
 			<div class="blog-excerpt">
-				<?php the_excerpt();?>
+				<?php echo excerpt('25');?>
 			</div>
 			<div class="buttons">
 				<a href="<?php echo get_permalink(); ?>">Read More</a>
