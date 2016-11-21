@@ -109,12 +109,12 @@ function custom_body_class( $classes ) {
  * Enqueue scripts and styles.
  */
 function ukrops_scripts() {
-	wp_enqueue_style( 'ukrops-style', get_stylesheet_directory_uri() . '/style.min.css');
   wp_enqueue_style( 'google-font-vollkorn', 'https://fonts.googleapis.com/css?family=Vollkorn', false);
+	wp_enqueue_style( 'ukrops-style', get_stylesheet_directory_uri() . '/style.min.css');
 
-	wp_enqueue_script( 'ukrops-jquery', get_template_directory_uri() . '/js/jquery.min.js');
-	wp_enqueue_script( 'ukrops-slick', get_template_directory_uri() . '/js/slick.min.js');
-	wp_enqueue_script( 'ukrops-js', get_template_directory_uri() . '/js/index.js');
+	wp_enqueue_script( 'ukrops-jquery', get_template_directory_uri() . '/js/jquery.min.js', null, '1.0', true);
+	wp_enqueue_script( 'ukrops-slick', get_template_directory_uri() . '/js/slick.min.js', null, '1.0', true);
+	wp_enqueue_script( 'ukrops-js', get_template_directory_uri() . '/js/index.js', null, '1.0', true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 	    wp_enqueue_script( 'comment-reply' );

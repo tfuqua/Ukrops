@@ -25,7 +25,7 @@
 }
 
 .product-card{
-  @include flex();
+  @include flex(1 0 auto);
   @include flexbox();
   @include flex-direction(column);
   @include border-radius(7px);

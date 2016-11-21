@@ -7366,6 +7366,7 @@ blockquote {
   .col-lg-8 blockquote {
     margin: 0 -16.6666666667% 20px; } }
 
+.hero-button a,
 .button {
   display: inline-block;
   font-size: 18px;
@@ -7382,6 +7383,7 @@ blockquote {
   -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1); }
+  .hero-button a:hover,
   .button:hover {
     color: #fff; }
 
@@ -7950,8 +7952,9 @@ footer {
       .hero .hero-text {
         width: 50%; } }
     .hero .hero-text .hero-button {
-      margin-top: 25px; }
-      .hero .hero-text .hero-button a {
+      margin-top: 25px;
+      /*
+      a {
         border-radius: 5px;
         display: inline-block;
         font-size: 18px;
@@ -7959,11 +7962,13 @@ footer {
         padding: 10px 15px;
         color: #ffffff;
         background-image: linear-gradient(to bottom, #db2c10, #bf311a);
-        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1); }
-        @media (min-width: 900px) {
-          .hero .hero-text .hero-button a {
-            font-size: 18px;
-            padding: 10px 30px; } }
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+
+        @media (min-width: $screen-md-min) {
+          font-size: 18px;
+          padding: 10px 30px;
+        }
+      }*/ }
 
 .products-hero.hero {
   min-height: auto;
@@ -8451,11 +8456,11 @@ ul.social-icons {
       flex: 0 1 33%; } }
 
 .product-card {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-box-flex: 1 0 auto;
+  -moz-box-flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
