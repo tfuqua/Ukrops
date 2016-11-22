@@ -16,7 +16,7 @@
 			}?>
 
 			<div class="blurb">
-				<?php the_excerpt() ?>
+				<?php echo excerpt('45'); ?>
 			</div>
 		</div>
 

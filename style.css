@@ -8614,7 +8614,8 @@ ul.social-icons {
     font-weight: 500;
     font-style: normal;
     font-stretch: normal;
-    color: #c09b72; }
+    color: #c09b72;
+    padding: 10px 0 30px; }
 
 .carousel-nav {
   margin: 0 auto;
@@ -8771,25 +8772,26 @@ ul.social-icons {
     display: block;
     padding: 5px 0; }
 
-.sidebar-cooks h3 {
+.sidebar h3 {
   margin: 0 0 10px; }
-  .sidebar-cooks h3 span {
-    display: inline-block;
-    font-size: 20px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    color: #c09b72;
-    border-bottom: 2px solid #c09b72;
-    padding: 10px 0; }
 
-.sidebar-cooks ul {
+.sidebar ul {
   list-style: none;
   padding: 0;
   margin: 0; }
-  .sidebar-cooks ul li {
+  .sidebar ul li {
     padding: 10px 0 10px 10px; }
-    .sidebar-cooks ul li a {
+    .sidebar ul li a {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      color: #c09b72;
+      border-bottom: 2px solid #c09b72; }
+    .sidebar ul li ul li a {
+      padding: 0;
+      border: none;
       font-size: 20px;
       font-weight: 500;
       font-style: normal;

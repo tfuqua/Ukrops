@@ -70,7 +70,8 @@ get_header(); ?>
 		          </div>
 							<div class="col-sm-4 col-md-3 col-sm-push-1 col-md-push-1 hidden-xs">
 		            <?php
-		            get_sidebar('cooks');
+								$showChildren = true;
+		            get_sidebar('submenu');
 		            ?>
 		          </div>
 						<?php
