@@ -1,37 +1,5 @@
-
-.sidebar{
-  border-left: 1px dashed $menu-link-border-color;
-  padding-left:20px;
-  padding-bottom:50px;
-}
-
-.sidebar-categories {
-  h3{
-    font-size: 16px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    color: #9b9b9b;
-  }
-
-  ul {
-    list-style:none;
-    padding: 0;
-    margin:0;
-
-    li a {
-      font-size: 20px;
-      font-weight: 500;
-      font-style: normal;
-      font-stretch: normal;
-      color: #c1311a;
-      display: block;
-      padding:5px 0;
-    }
-  }
-}
-
 .sidebar {
+  padding-left:10px;
 
   h3 {
     margin:0 0 10px;
@@ -71,6 +39,38 @@
           line-height: 1.1;
           color: #c1311a;
         }
+      }
+    }
+  }
+}
+
+.sidebar-categories.sidebar {
+
+  h3{
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    color: #9b9b9b;
+  }
+
+  ul {
+    list-style:none;
+    padding: 0;
+    margin:0;
+
+    li {
+      padding:0;
+
+      a {
+        font-size: 20px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        color: #c1311a;
+        display: block;
+        padding:5px 0;
+        border:none;
       }
     }
   }

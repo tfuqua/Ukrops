@@ -101,26 +101,35 @@ table.table.store-locator {
     font-stretch: normal;
     color: #c09b72;
     clear:both;
+    margin:40px 0 0;
   }
 
-  .store-imgs {
-    overflow: hidden;
-    margin:10px 0 50px;
-  }
-
-  .img-wrapper{
-    float:left;
-    width:33%;
-    padding:30px;
-
-    &:nth-child(4){
-      clear:left;
-      padding:30px 15px;
+  .partner-imgs{
+    @media (min-width: $screen-sm-min) {
+      @include flexbox();
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
     }
 
-    img{
-      width: 100%;
-      height: auto;
+    .partner-img{
+      padding:30px;
+
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+
+      @media (min-width: $screen-sm-min) {
+        @include flex-basis(50%);
+      }
+
+      @media (min-width: $screen-md-min) {
+        @include flex-basis(33%);
+      }
+
+      img{
+        @include flex(0 0 auto);
+        width:60%;
+      }
     }
   }
 }

@@ -15,12 +15,18 @@
  								<div class="hero-header">
  	              	<?php echo get_field('hero_header')?>
  								</div>
+                <?php if(get_field('hero_body')){ ?>
  								<div class="hero-body">
  		              <?php echo get_field('hero_body')?>
  								</div>
- 								<div class="hero-buttons">
- 									<a class="button" href="<?php echo get_field('button_link')?>"><?php echo get_field('button_text'); ?></a>
- 								</div>
+                <?php
+                }
+                if(get_field('button_text')){ ?>
+                <div class="hero-buttons">
+                  <a class="button" href="<?php echo get_field('button_link')?>"><?php echo get_field('button_text'); ?></a>
+                </div>
+                <?php
+                }?>
  	            </div>
  	          </div>
  	        </div>
@@ -34,9 +40,27 @@
  							<div>
  								<div class="hero-text">
  									<?php
- 									while ( have_posts() ) : the_post();
- 										the_title();
- 									endwhile;
+                  if (get_field('hero_header')){ ?>
+                    <div class="hero-header">
+     	              	<?php echo get_field('hero_header')?>
+     								</div>
+                    <?php if(get_field('hero_body')){ ?>
+     								<div class="hero-body">
+     		              <?php echo get_field('hero_body')?>
+     								</div>
+                    <?php
+                    }
+    							  if(get_field('button_text')){ ?>
+     								<div class="hero-buttons">
+     									<a class="button" href="<?php echo get_field('button_link')?>"><?php echo get_field('button_text'); ?></a>
+     								</div>
+                    <?php
+                    }
+                  } else {
+                    while ( have_posts() ) : the_post();
+   										the_title();
+   									endwhile;
+                  }
  									?>
  								</div>
  							</div>

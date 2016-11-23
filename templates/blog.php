@@ -34,8 +34,8 @@ get_header(); ?>
 			 }?>
 
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-8 col-md-9">
+				<div class="flex-row">
+					<div class="content">
             <?php
             // The Query
             $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
@@ -66,12 +66,10 @@ get_header(); ?>
             // Reset Query
             wp_reset_query(); ?>
           </div>
-          <div class="col-sm-4 col-md-3 hidden-xs">
+          <div class="aside">
             <?php get_sidebar('categories');?>
           </div>
         </div>
-				<br /><br />
-			</br/>
       </div>
 
 		</main><!-- #main -->

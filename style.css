@@ -7406,8 +7406,49 @@ body {
   margin: 0 auto;
   position: relative; }
 
+main {
+  min-height: 350px; }
+
 main.padded {
   padding-bottom: 50px; }
+
+.flex-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .flex-row .content {
+    padding: 0 15px 30px;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-flex-basis: 75%;
+    -moz-flex-basis: 75%;
+    -ms-flex-basis: 75%;
+    flex-basis: 75%; }
+    @media (min-width: 900px) {
+      .flex-row .content {
+        padding-right: 8.3333333%; } }
+  .flex-row .aside {
+    display: none; }
+    @media (min-width: 900px) {
+      .flex-row .aside {
+        display: block;
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        -webkit-flex-basis: 25%;
+        -moz-flex-basis: 25%;
+        -ms-flex-basis: 25%;
+        flex-basis: 25%;
+        padding: 50px 15px;
+        margin-top: -50px;
+        border-left: 1px dashed rgba(192, 155, 114, 0.4); } }
 
 header {
   position: relative;
@@ -7461,7 +7502,8 @@ header {
       margin: 6px auto 10px; }
       @media (min-width: 900px) {
         header .brand img {
-          height: 44px;
+          margin: 10px auto 10px;
+          height: 45px;
           display: block; } }
 
 /* Child Site Styling */
@@ -7653,7 +7695,7 @@ html.show-menu .navbar-toggle .icon-bar {
     .extra-nav ul > li {
       padding: 0 15px 0 15px; } }
   .extra-nav ul > li a {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 48px;
     color: #c1311a; }
   .extra-nav li:first-child {
@@ -8748,56 +8790,55 @@ ul.social-icons {
   display: none; }
 
 .sidebar {
-  border-left: 1px dashed rgba(192, 155, 114, 0.4);
-  padding-left: 20px;
-  padding-bottom: 50px; }
+  padding-left: 10px; }
+  .sidebar h3 {
+    margin: 0 0 10px; }
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .sidebar ul li {
+      padding: 10px 0 10px 10px; }
+      .sidebar ul li a {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        color: #c09b72;
+        border-bottom: 2px solid #c09b72; }
+      .sidebar ul li ul li a {
+        padding: 0;
+        border: none;
+        font-size: 20px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.1;
+        color: #c1311a; }
 
-.sidebar-categories h3 {
+.sidebar-categories.sidebar h3 {
   font-size: 16px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
   color: #9b9b9b; }
 
-.sidebar-categories ul {
+.sidebar-categories.sidebar ul {
   list-style: none;
   padding: 0;
   margin: 0; }
-  .sidebar-categories ul li a {
-    font-size: 20px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    color: #c1311a;
-    display: block;
-    padding: 5px 0; }
-
-.sidebar h3 {
-  margin: 0 0 10px; }
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0; }
-  .sidebar ul li {
-    padding: 10px 0 10px 10px; }
-    .sidebar ul li a {
-      display: inline-block;
+  .sidebar-categories.sidebar ul li {
+    padding: 0; }
+    .sidebar-categories.sidebar ul li a {
       font-size: 20px;
       font-weight: 500;
       font-style: normal;
       font-stretch: normal;
-      color: #c09b72;
-      border-bottom: 2px solid #c09b72; }
-    .sidebar ul li ul li a {
-      padding: 0;
-      border: none;
-      font-size: 20px;
-      font-weight: 500;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 1.1;
-      color: #c1311a; }
+      color: #c1311a;
+      display: block;
+      padding: 5px 0;
+      border: none; }
 
 .pager a {
   display: inline-block;
@@ -9167,22 +9208,59 @@ table.table.store-locator {
   font-style: normal;
   font-stretch: normal;
   color: #c09b72;
-  clear: both; }
+  clear: both;
+  margin: 40px 0 0; }
 
-.store-branding .store-imgs {
-  overflow: hidden;
-  margin: 10px 0 50px; }
+@media (min-width: 520px) {
+  .store-branding .partner-imgs {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; } }
 
-.store-branding .img-wrapper {
-  float: left;
-  width: 33%;
-  padding: 30px; }
-  .store-branding .img-wrapper:nth-child(4) {
-    clear: left;
-    padding: 30px 15px; }
-  .store-branding .img-wrapper img {
-    width: 100%;
-    height: auto; }
+.store-branding .partner-imgs .partner-img {
+  padding: 30px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center; }
+  @media (min-width: 520px) {
+    .store-branding .partner-imgs .partner-img {
+      -webkit-flex-basis: 50%;
+      -moz-flex-basis: 50%;
+      -ms-flex-basis: 50%;
+      flex-basis: 50%; } }
+  @media (min-width: 900px) {
+    .store-branding .partner-imgs .partner-img {
+      -webkit-flex-basis: 33%;
+      -moz-flex-basis: 33%;
+      -ms-flex-basis: 33%;
+      flex-basis: 33%; } }
+  .store-branding .partner-imgs .partner-img img {
+    -webkit-box-flex: 0 0 auto;
+    -moz-box-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 60%; }
 
 .dataTables_info {
   float: left;
@@ -9418,11 +9496,7 @@ table.table.store-locator {
       -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
       flex: 0 0 auto;
-      width: 75%;
-      /*width: 70%;
-        display: block;
-        margin: 0 auto;
-        height: auto;*/ }
+      width: 60%; }
 
 .search-term {
   font-size: 26px;

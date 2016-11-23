@@ -43,8 +43,8 @@ get_header(); ?>
         $pageID = get_the_ID(); ?>
 
 		      <div class="container-fluid">
-		        <div class="row">
-		          <div class="col-sm-7 col-md-8">
+		        <div class="flex-row">
+		          <div class="content">
         				<?php the_content();?>
 
 								<div class="team-list">
@@ -68,7 +68,7 @@ get_header(); ?>
 		              ?>
 		            </div>
 		          </div>
-							<div class="col-sm-4 col-md-3 col-sm-push-1 col-md-push-1 hidden-xs">
+							<div class="aside">
 		            <?php
 								$showChildren = true;
 		            get_sidebar('submenu');

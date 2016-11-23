@@ -46,8 +46,8 @@ get_header(); ?>
  			 }?>
 
 			<div class="container-fluid">
-        <div class="row">
-          <div class="col-md-9">
+				<div class="flex-row">
+					<div class="content">
             <?php
     				while ( have_posts() ) : the_post();
 
@@ -61,7 +61,7 @@ get_header(); ?>
     				endwhile; // End of the loop.
     				?>
           </div>
-          <div class="col-md-3">
+          <div class="aside">
             <?php get_sidebar('categories'); ?>
           </div>
         </div>

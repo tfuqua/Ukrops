@@ -27,7 +27,37 @@ header, footer{
   position: relative;
 }
 
+main {
+    min-height: 350px;
+}
 
 main.padded {
   padding-bottom:50px;
+}
+
+.flex-row{
+  @include flexbox();
+
+  .content{
+    padding:0 15px 30px;
+    @include flex();
+    @include flex-basis(75%);
+
+    @media (min-width: $screen-md-min) {
+      padding-right:8.3333333%;
+    }
+  }
+
+  .aside{
+    display: none;
+
+    @media (min-width: $screen-md-min) {
+      display: block;
+      @include flex();
+      @include flex-basis(25%);
+      padding:50px 15px;
+      margin-top:-50px;
+      border-left: 1px dashed $menu-link-border-color;
+    }
+  }
 }

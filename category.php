@@ -51,8 +51,8 @@ get_header(); ?>
  			 }?>
 
 		<div class="container-fluid">
-			<div class="row">
-					<div class="col-sm-8 col-md-9">
+			<div class="flex-row">
+					<div class="content">
 						<?php
 						if ( have_posts() ) : ?>
 						<div class="blog-cards">
@@ -71,8 +71,7 @@ get_header(); ?>
             <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 					<?php endif; ?>
 					</div>
-          <div class="col-sm-4 col-md-3 hidden-xs">
-						<br />
+          <div class="aside">
             <?php get_sidebar('categories');?>
 					</div>
 			</div>
