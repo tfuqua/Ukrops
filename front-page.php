@@ -40,13 +40,13 @@ get_header(); ?>
         <div class="branding">
           <div class="brand-container">
             <?php while ( have_rows('brands') ) : the_row(); ?>
-                <div class="brand-item">
-                    <a href="<?php echo get_sub_field('brand_link')?>">
-                      <?php if (get_sub_field('brand_logo') != '') {
-                        echo wp_get_attachment_image(get_sub_field('brand_logo'), 'full', false, array( 'class' => '') );
-                      } ?>
-                    </a>
-                </div>
+              <div class="brand-item">
+                  <a href="<?php echo get_sub_field('brand_link')?>">
+                    <?php if (get_sub_field('brand_logo') != '') {
+                      echo wp_get_attachment_image(get_sub_field('brand_logo'), 'full', false, array( 'class' => '') );
+                    } ?>
+                  </a>
+              </div>
             <?php endwhile; ?>
           </div>
         </div>

@@ -65,8 +65,6 @@
   }
 
   .brand-item{
-    padding:10px 15px;
-
     @media (min-width: $screen-sm-min) {
       @include flex-basis(50%);
     }
@@ -83,6 +81,7 @@
 
       height: 200px;
       position: relative;
+      padding:10px 15px 0;
 
       @include flexbox();
       @include align-items(center);
@@ -99,6 +98,7 @@
 
     .brand-content{
       @include flex();
+      padding:0 15px;
     }
 
     &:nth-child(1),
@@ -116,6 +116,8 @@
       font-stretch: normal;
       line-height: 1.5;
       color: #c1311a;
+      display: inline-block;
+      padding:0 15px;
     }
   }
 }

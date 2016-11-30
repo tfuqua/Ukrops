@@ -1,0 +1,37 @@
+.ie{
+  .featured-item {
+    .featured-section{
+        display: block !important;
+
+      &.whr .flex{
+        display: block;
+      }
+
+      @media (min-width: $screen-lg-min) {
+          .has-img{
+            width:50%;
+            float:left;
+        }
+      }
+    }
+  }
+
+  .product-card-wrapper{
+    @media (min-width: $screen-md-min) {
+      @include flex-basis(30% !important);
+    }
+  }
+
+  .product-card {
+    display: block !important;
+  }
+
+  .brands .brand-item{
+    display: block !important;
+
+  }
+
+  .branding .brand-item {
+    display: block;
+  }
+}

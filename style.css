@@ -7293,6 +7293,31 @@ button.close {
   overflow: visible;
   clip: auto; }
 
+.ie .featured-item .featured-section {
+  display: block !important; }
+  .ie .featured-item .featured-section.whr .flex {
+    display: block; }
+  @media (min-width: 1080px) {
+    .ie .featured-item .featured-section .has-img {
+      width: 50%;
+      float: left; } }
+
+@media (min-width: 900px) {
+  .ie .product-card-wrapper {
+    -webkit-flex-basis: 30% !important;
+    -moz-flex-basis: 30% !important;
+    -ms-flex-basis: 30% !important;
+    flex-basis: 30% !important; } }
+
+.ie .product-card {
+  display: block !important; }
+
+.ie .brands .brand-item {
+  display: block !important; }
+
+.ie .branding .brand-item {
+  display: block; }
+
 /*@media (max-width: $screen-xs-max) { ... }
 @media (min-width: $screen-sm-min) { ... }
 @media (max-width: $screen-sm-max) { ... }
@@ -7966,6 +7991,7 @@ footer {
     .hero {
       min-height: 450px; } }
   .hero .hero-text-wrapper {
+    position: relative;
     display: table-cell;
     vertical-align: middle;
     padding: 20px 0; }
@@ -9366,7 +9392,6 @@ table.table.store-locator {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; } }
   .brands .brand-item {
-    padding: 10px 15px;
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     -webkit-flex: 1;
@@ -9396,6 +9421,7 @@ table.table.store-locator {
     .brands .brand-item .brand-img {
       height: 200px;
       position: relative;
+      padding: 10px 15px 0;
       display: -webkit-box;
       display: -moz-box;
       display: -webkit-flex;
@@ -9420,7 +9446,8 @@ table.table.store-locator {
       -moz-box-flex: 1;
       -webkit-flex: 1;
       -ms-flex: 1;
-      flex: 1; }
+      flex: 1;
+      padding: 0 15px; }
     .brands .brand-item:nth-child(1) .brand-img img, .brands .brand-item:nth-child(4) .brand-img img {
       width: auto;
       max-height: 90%; }
@@ -9430,7 +9457,9 @@ table.table.store-locator {
       font-style: normal;
       font-stretch: normal;
       line-height: 1.5;
-      color: #c1311a; }
+      color: #c1311a;
+      display: inline-block;
+      padding: 0 15px; }
 
 .community-events {
   margin: 30px 0; }

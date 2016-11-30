@@ -71,7 +71,7 @@ add_action( 'widgets_init', 'ukrops_sidebar_init' );
 
 //This method helps keep get_excerpt() to 5 lines
 function custom_excerpt_length( $length ) {
-	return 100;
+	return 200;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -145,11 +145,7 @@ function my_change_sort_order($query){
 require_once('menu_walker.php');
 
 function excerpt($num) {
-    $limit = $num+1;
-    $excerpt = explode(' ', get_the_excerpt(), $limit);
-    array_pop($excerpt);
-    $excerpt = implode(" ",$excerpt)."...";
-    echo $excerpt;
+		echo wp_trim_words( get_the_excerpt(), $num, '...' );
 }
 
 function my_gallery_style() {
