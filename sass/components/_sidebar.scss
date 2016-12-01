@@ -26,6 +26,10 @@
         font-stretch: normal;
         color: #c09b72;
         border-bottom:2px solid #c09b72;
+
+        &:hover{
+          text-decoration: none;
+        }
       }
 
       ul li {

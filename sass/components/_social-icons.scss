@@ -12,6 +12,7 @@ ul.social-icons {
   li {
     display:inline-block;
     margin: 0 5px;
+    
     a {
       @include border-radius(50%);
       display: block;
@@ -19,6 +20,10 @@ ul.social-icons {
       height: 45px;
       text-align: center;
       color:#fff;
+
+      &:hover{
+        text-decoration: none;
+      }
 
       @media (min-width: $screen-md-min) {
         width: 50px;

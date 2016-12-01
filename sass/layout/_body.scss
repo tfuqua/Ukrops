@@ -36,14 +36,15 @@ main.padded {
 }
 
 .flex-row{
-  @include flexbox();
+  @media (min-width: $screen-md-min) {
+    @include flexbox();
+  }
 
   .content{
-    padding:0 15px 30px;
-    @include flex();
-    @include flex-basis(75%);
-
     @media (min-width: $screen-md-min) {
+      @include flex();
+      @include flex-basis(75%);
+      padding:0 15px 30px;
       padding-right:8.3333333%;
     }
   }

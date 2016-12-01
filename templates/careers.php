@@ -28,8 +28,7 @@ get_header(); ?>
 			 }?>
 
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-9">
+					<div class="flex-row">
             <div class="content">
               <?php
               while ( have_posts() ) : the_post();
@@ -45,9 +44,8 @@ get_header(); ?>
               ?>
 
               <script type="text/javascript" src="//app.jazz.co/widgets/basic/create/ukropshomestylefoods" charset="utf-8"></script>
-            </div>
           </div>
-          <div class="col-md-2 col-md-push-1 hidden-sm hidden-xs">
+          <div class="aside">
             <?php
 						$showChildren = false;
 						get_sidebar('submenu');
