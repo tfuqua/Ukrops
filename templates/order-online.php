@@ -44,26 +44,27 @@ get_header(); ?>
   			<div class="product-list">
           <?php if(have_rows('promoted_cards')) {
             while ( have_rows('promoted_cards') ) : the_row(); ?>
-              <div class="product-card-wrapper">
-              	<div class="product-card">
-									<?php
-										$background = wp_get_attachment_image_src(get_sub_field('image'), 'full', false);
-									?>
-									<div class="product-img" style="background-image: url('<?php echo $background[0] ?>');">
-									</div>
+						<div class="product-card-wrapper">
+							<div class="product-card">
+								<?php
+									$background = wp_get_attachment_image_src(get_sub_field('image'), 'full', false);
+								?>
+								<div class="product-img" style="background-image: url('<?php echo $background[0] ?>');">
+								</div>
+
               		<div class="product-section">
               			<h3><?php echo get_sub_field('heading') ?></h3>
               			<div class="blurb">
               				<?php echo get_sub_field('body') ?>
               			</div>
+										<div class="product-button">
+											<a class="button" href="<?php echo the_sub_field('button_link')?>">
+												<?php echo the_sub_field('button_text');?>
+											</a>
+										</div>
               		</div>
-              		<div class="product-button">
-                    <a class="button" href="<?php echo the_sub_field('button_link')?>">
-                      <?php echo the_sub_field('button_text');?>
-                    </a>
-              		</div>
-              	</div>
               </div>
+						</div>
 
             <?php
             endwhile;

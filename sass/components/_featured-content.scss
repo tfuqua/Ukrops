@@ -6,13 +6,13 @@
   -o-background-size: contain;
   background-size: contain;
 
-  .container-fluid {
-    margin: 0 auto 15px;
-    padding:0 15px;
+  .featured-items {
+    margin: 0 auto;
+    max-width: $max-site-width;
+    padding:30px 15px 50px;
 
     @media (min-width: $screen-md-min) {
       @include flexbox();
-      @include flex-direction(row);
     }
 
     .featured-item{

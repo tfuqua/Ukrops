@@ -31,7 +31,6 @@
     }
 
     .partner-img{
-      padding:30px;
 
       @include flexbox();
       @include align-items(center);
@@ -47,7 +46,8 @@
 
       img{
         @include flex(0 0 auto);
-        width:60%;
+        padding:30px;
+        width:70%;
       }
     }
   }

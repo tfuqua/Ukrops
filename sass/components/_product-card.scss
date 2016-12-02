@@ -10,9 +10,6 @@
 }
 
 .product-card-wrapper{
-
-  padding:0 15px 30px;
-
   @media (min-width: $screen-sm-min) {
     @include flexbox();
     @include flex(0 1 50%);
@@ -22,9 +19,11 @@
   @media (min-width: $screen-md-min) {
     @include flex(0 1 33%);
   }
+  padding:0 15px 30px;
 }
 
 .product-card{
+
   @include flex(1 0 auto);
   @include flexbox();
   @include flex-direction(column);
@@ -50,7 +49,9 @@
 
   .product-section{
 
-    @include flex;
+    @include flexbox();
+    @include flex(1 0 auto);
+    @include flex-direction(column);
 
     padding: 30px;
     font-size: 18px;
@@ -68,6 +69,10 @@
       font-style: normal;
       font-stretch: normal;
       color: #c1311a;
+    }
+
+    .blurb{
+      @include flex(1 0 auto);
     }
   }
 

@@ -49,7 +49,7 @@ get_header(); ?>
 					<?php
 					if( have_rows('community_events') ) { ?>
 						<div class="featured-content-wrapper">
-							<div class="container-fluid">
+							<div class="featured-items">
 								<?php while ( have_rows('community_events') ) : the_row(); ?>
 										<div class="featured-item">
 											<?php
