@@ -9,7 +9,8 @@
   .featured-items {
     margin: 0 auto;
     max-width: $max-site-width;
-    padding:30px 15px 50px;
+    position: relative;
+    padding:20px 15px;
 
     @media (min-width: $screen-md-min) {
       @include flexbox();

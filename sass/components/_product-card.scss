@@ -19,11 +19,10 @@
   @media (min-width: $screen-md-min) {
     @include flex(0 1 33%);
   }
-  padding:0 15px 30px;
 }
 
 .product-card{
-
+  margin: 0 15px 30px;
   @include flex(1 0 auto);
   @include flexbox();
   @include flex-direction(column);

@@ -3,16 +3,7 @@ html{
 }
 
 body{
-  /*@include flexbox();
-  @include flex-direction(column);
-
-  min-height: 100vh;*/
-
-  &.ie{
-    /*min-height: 100%;
-    height: auto!important;
-    height: 100%;*/
-  }
+  overflow-x:hidden;
 }
 .site-content { // Sticky Footer
   //@include flex();

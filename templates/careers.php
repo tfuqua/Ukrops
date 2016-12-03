@@ -47,7 +47,7 @@ get_header(); ?>
           </div>
           <div class="aside">
             <?php
-						$showChildren = false;
+						$showChildren = true;
 						get_sidebar('submenu');
 						?>
           </div>

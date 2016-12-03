@@ -112,8 +112,6 @@ table.table.store-locator {
     }
 
     .partner-img{
-      padding:30px;
-
       @include flexbox();
       @include align-items(center);
       @include justify-content(center);
@@ -128,7 +126,8 @@ table.table.store-locator {
 
       img{
         @include flex(0 0 auto);
-        width:60%;
+        padding:30px;
+        width:70%;
       }
     }
   }
