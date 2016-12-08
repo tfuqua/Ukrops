@@ -62,7 +62,7 @@
     }
 
     .featured-section {
-      @include flex(1 1 auto);
+      @include flex(1 0 auto);
       @include flexbox();
       @include flex-direction(column);
 
@@ -91,7 +91,7 @@
     }
 
     .featured-body{
-      @include flex();
+      @include flex(1 0 auto);
       font-size: 15px;
       font-weight: 300;
       color: #fff;

@@ -43,7 +43,10 @@ get_header(); ?>
               <div class="brand-item">
                   <a href="<?php echo get_sub_field('brand_link')?>">
                     <?php if (get_sub_field('brand_logo') != '') {
-                      echo wp_get_attachment_image(get_sub_field('brand_logo'), 'full', false, array( 'class' => '') );
+                        $background = wp_get_attachment_image_src(get_sub_field('brand_logo'), 'full', false);
+                      ?>
+                      <div class="img-wrapper" style="background-image: url('<?php echo $background[0] ?>');"></div>
+                    <?php  
                     } ?>
                   </a>
               </div>

@@ -73,9 +73,10 @@ get_header(); ?>
 			            <?php while (have_rows('brands')) : the_row(); ?>
 			                <div class="brand-item">
 													<div class="brand-img">
-														<?php if (get_sub_field('image') != '') {
-														echo wp_get_attachment_image(get_sub_field('image'), 'full', false, array( 'class' => '') );
-														}?>
+														<?php
+					                    $background = wp_get_attachment_image_src(get_sub_field('image'), 'full', false);
+					                  ?>
+				                  	<div class="img-wrapper" style="background-image: url('<?php echo $background[0] ?>');"></div>
 													</div>
 													<div class="brand-content">
 															<?php echo get_sub_field('brand_content');?>
