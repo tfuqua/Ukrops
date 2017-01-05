@@ -116,7 +116,7 @@ get_header(); ?>
 	        <div class="hero-text-wrapper">
 	          <div>
 							<div class="hero-body">
-								<?php echo get_field('hero_body')?>
+								<?php echo get_field('hero_body_2')?>
 							</div>
 							<div class="hero-button">
 								<a class="button" href="<?php echo get_field('hero_button_link') ?>">

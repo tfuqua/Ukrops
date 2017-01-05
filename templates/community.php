@@ -84,7 +84,9 @@ get_header(); ?>
 							<?php if(have_rows('community_partners')) {
 								while ( have_rows('community_partners') ) : the_row();?>
 									<div class="partner-img">
-										<?php echo wp_get_attachment_image(get_sub_field('image'), 'medium', false, array( 'class' => '')); ?>
+										<a href="<?php echo the_sub_field('partner_link')?>">
+											<?php echo wp_get_attachment_image(get_sub_field('image'), 'medium', false, array( 'class' => '')); ?>
+										</a>
 									</div>
 								<?php
 								endwhile;

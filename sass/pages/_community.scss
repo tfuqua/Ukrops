@@ -44,6 +44,10 @@
         @include flex-basis(33%);
       }
 
+      a {
+        text-align: center;
+      }
+      
       img{
         @include flex(0 0 auto);
         padding:30px;

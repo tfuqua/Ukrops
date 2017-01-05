@@ -86,14 +86,9 @@
       position: relative;
       padding:10px 15px 10px;
 
-      @include flexbox();
-      @include align-items(center);
-      @include justify-content(center);
-
       .img-wrapper {
         height: 100%;
         width:95%;
-        margin:0 auto;
 
         -webkit-background-size: contain;
         -moz-background-size: contain;

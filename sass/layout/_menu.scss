@@ -69,12 +69,6 @@ nav.main-navigation .menu-main-nav-container {
         padding: 17px 10px 17px 10px;
         font-weight: 500;
 
-        &:hover,
-        &:active,
-        &:focus{
-          text-decoration: none;
-        }
-
         @media (min-width: $screen-md-min) {
           padding: 0 10px;
           font-size:14px;
@@ -149,6 +143,7 @@ nav.main-navigation .menu-main-nav-container {
       padding:0;
       margin:0;
       width:100%;
+      min-width: 200px;
       border: 1px dashed $menu-link-border-color;
       border-top:2px solid #dac174;
       background: #fff;
@@ -156,10 +151,13 @@ nav.main-navigation .menu-main-nav-container {
 
 
     li {
+      display: block;
+
       a {
         border:none;
         font-size:16px;
         padding:15px 8px;
+        text-align: left;
 
         @media (min-width: $screen-md-min) {
           line-height: 20px;

@@ -7563,8 +7563,6 @@ nav.main-navigation .menu-main-nav-container > ul {
       text-align: left;
       padding: 17px 10px 17px 10px;
       font-weight: 500; }
-      nav.main-navigation .menu-main-nav-container > ul li a:hover, nav.main-navigation .menu-main-nav-container > ul li a:active, nav.main-navigation .menu-main-nav-container > ul li a:focus {
-        text-decoration: none; }
       @media (min-width: 900px) {
         nav.main-navigation .menu-main-nav-container > ul li a {
           padding: 0 10px;
@@ -7616,19 +7614,23 @@ nav.main-navigation .menu-main-nav-container ul ul {
       padding: 0;
       margin: 0;
       width: 100%;
+      min-width: 200px;
       border: 1px dashed rgba(192, 155, 114, 0.4);
       border-top: 2px solid #dac174;
       background: #fff; } }
-  nav.main-navigation .menu-main-nav-container ul ul li a {
-    border: none;
-    font-size: 16px;
-    padding: 15px 8px; }
-    @media (min-width: 900px) {
-      nav.main-navigation .menu-main-nav-container ul ul li a {
-        line-height: 20px;
-        min-height: 0px; } }
-  nav.main-navigation .menu-main-nav-container ul ul li:last-child a {
-    border: none; }
+  nav.main-navigation .menu-main-nav-container ul ul li {
+    display: block; }
+    nav.main-navigation .menu-main-nav-container ul ul li a {
+      border: none;
+      font-size: 16px;
+      padding: 15px 8px;
+      text-align: left; }
+      @media (min-width: 900px) {
+        nav.main-navigation .menu-main-nav-container ul ul li a {
+          line-height: 20px;
+          min-height: 0px; } }
+    nav.main-navigation .menu-main-nav-container ul ul li:last-child a {
+      border: none; }
 
 @media (min-width: 900px) {
   nav.main-navigation .menu-main-nav-container ul > li:hover ul {
@@ -9386,24 +9388,10 @@ table.table.store-locator {
     .brands .brand-item .brand-img {
       height: 200px;
       position: relative;
-      padding: 10px 15px 10px;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      -ms-align-items: center;
-      align-items: center;
-      -webkit-justify-content: center;
-      -moz-justify-content: center;
-      -ms-justify-content: center;
-      justify-content: center; }
+      padding: 10px 15px 10px; }
       .brands .brand-item .brand-img .img-wrapper {
         height: 100%;
         width: 95%;
-        margin: 0 auto;
         -webkit-background-size: contain;
         -moz-background-size: contain;
         -o-background-size: contain;
@@ -9486,6 +9474,8 @@ table.table.store-locator {
         -moz-flex-basis: 33%;
         -ms-flex-basis: 33%;
         flex-basis: 33%; } }
+    .community-partners .partner-imgs .partner-img a {
+      text-align: center; }
     .community-partners .partner-imgs .partner-img img {
       -webkit-box-flex: 0 0 auto;
       -moz-box-flex: 0 0 auto;
