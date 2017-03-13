@@ -71,7 +71,7 @@ get_header(); ?>
 							<div class="aside">
 		            <?php
 								$showChildren = true;
-		            get_sidebar('submenu');
+		            get_sidebar('cooks');
 		            ?>
 		          </div>
 						<?php

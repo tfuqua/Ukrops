@@ -4,20 +4,17 @@
   max-height: 290px;
 }
 
-.search-column.col-md-3{
-  float:none;
-
-  @media (min-width: $screen-md-min) {
-    float:right;
-    padding-left:30px;
-    padding-top:40px;
+.store-locator-div{
+  .aside{
+    display:block;
+    @media (min-width: $screen-md-min) {
+      order:2;
+    }
   }
-}
-
-.map-column {
-  @media (min-width: $screen-md-min) {
-    padding-right:30px;
-    padding-top:40px;
+  content {
+    @media (min-width: $screen-md-min) {
+      order:1;
+    }
   }
 }
 
@@ -78,6 +75,13 @@ table.table.store-locator {
       font-stretch: normal;
       line-height: 1.5;
       color: #794400;
+
+      &:nth-child(4){
+        min-width:151px !important;
+      }
+      &:nth-child(5){
+        max-width:300px !important;
+      }      
     }
   }
 

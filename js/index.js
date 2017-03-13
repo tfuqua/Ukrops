@@ -39,7 +39,7 @@ $(function(){
     autoplaySpeed: 2000,
     fade: true,
     slidesToShow:1,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     cssEase: 'linear'
   });
 
@@ -57,6 +57,9 @@ $(function(){
       arrows: false,
       fade: true,
       autoplay: true,
+      autoplaySpeed: 5000,
+      speed:500,
+      cssEase: 'linear',
       slidesToShow:1,
   });
 

@@ -145,13 +145,10 @@ function my_change_sort_order($query){
 require_once('menu_walker.php');
 
 function excerpt($num) {
-		echo wp_trim_words( get_the_excerpt(), $num, '...' );
+	echo wp_trim_words( get_the_excerpt(), $num, '...' );
 }
 
 function my_gallery_style() {
-    return "
-";
+    return "";
 }
-
-
 add_filter( 'use_default_gallery_style', '__return_false' );
