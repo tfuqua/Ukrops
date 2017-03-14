@@ -17,9 +17,11 @@ get_header(); ?>
 								<div class="hero-body">
 									<?php echo get_field('hero_body')?>
 								</div>
+								<?php if(get_field('video_url')){ ?>
 								<div class="hero-button">
 									<a href="#" id="video-toggle" class="button">Watch The Video</a>
 								</div>
+								<?php } ?>
 	        </div>
 	      </div>
 	    <?php

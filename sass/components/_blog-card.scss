@@ -51,13 +51,14 @@
   .blog-info {
     @include flex(1 0 50%);
     background: url('images/cream.png') top left repeat;
+    padding:15px;
   }
 
   .blog-info-wrapper{
     border: 1px dashed #c13019;
     background: rgba(255,255,255,.75);
     padding:22px;
-    margin:15px;
+
   }
 
   .buttons a {

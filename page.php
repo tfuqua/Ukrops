@@ -9,11 +9,13 @@
  	    <?php if(get_field('hero_image')) { ?>
  	      <?php $background = wp_get_attachment_image_src(get_field('hero_image'), 'full', false); ?>
  		     <div class="hero mini-hero" style="background-image: url('<?php echo $background[0] ?>');">
+
+					<?php if (get_field('hero_heading')) { ?>
  	        <div class="hero-text-wrapper">
  	          <div>
  	            <div class="hero-text">
  								<div class="hero-header">
- 	              	<?php echo get_field('hero_header')?>
+ 	              	<?php echo get_field('hero_heading')?>
  								</div>
                 <?php if(get_field('hero_body')){ ?>
  								<div class="hero-body">
@@ -30,6 +32,8 @@
  	            </div>
  	          </div>
  	        </div>
+			 		<?php } ?>
+
  	      </div>
  	    <?php
  				} else {
@@ -40,9 +44,9 @@
  							<div>
  								<div class="hero-text">
  									<?php
-                  if (get_field('hero_header')){ ?>
+                  if (get_field('hero_heading')){ ?>
                     <div class="hero-header">
-     	              	<?php echo get_field('hero_header')?>
+     	              	<?php echo get_field('hero_heading')?>
      								</div>
                     <?php if(get_field('hero_body')){ ?>
      								<div class="hero-body">

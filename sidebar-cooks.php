@@ -37,10 +37,10 @@
     array_push($menu, $parent);
 
     $args = array(
-    	'parent' => $parent->ID,
-    	'post_type'   => 'page',
-      'order' => 'asc',
-      'orderby' => 'menu_order'
+      'sort_order' => 'asc',
+      'sort_column' => 'menu_order',
+      'parent' => $parent->ID,
+      'post_type' => 'page',
     );
 
     $children = get_pages($args);

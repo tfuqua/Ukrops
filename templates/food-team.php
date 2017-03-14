@@ -51,7 +51,7 @@ get_header(); ?>
 		              <?php
 		               $args = array(
 		              	'sort_order' => 'asc',
-		              	'sort_column' => 'ID',
+		              	'sort_column' => 'menu_order',
 		              	'parent' => $pageID,
 		              	'post_type' => 'page',
 		              );

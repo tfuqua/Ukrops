@@ -266,7 +266,7 @@ html.show-menu .navbar-toggle {
     }
   }
 
-  li:first-child{
+  > li:first-child{
     position: relative;
     @media (min-width: $screen-lg-min) {
       padding-left:5px;
@@ -388,5 +388,46 @@ html.show-menu {
       }
     }
 
+  }
+}
+
+//Brands dropdown styling. dropdowns on dropdowns
+@media (min-width: $screen-md-min) {
+  .extra-nav {
+      ul > li {
+        position: relative;
+        
+        ul {
+          display: none;
+          position: absolute;
+          background-color: #f5f5f5;
+          border:1px solid #ececec;
+          min-width: 180px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+          list-style:none;
+          padding:5px;
+          margin:0;
+
+          li {
+            padding:0;
+
+            a {
+              display: block;
+              padding:0;
+              text-align: left;
+              line-height: 30px;
+            }
+          }
+        }
+
+        &:hover{
+          cursor: pointer;
+
+          ul {
+            display:block;
+          }
+        }
+      }
   }
 }

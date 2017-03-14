@@ -7695,12 +7695,12 @@ html.show-menu .navbar-toggle .icon-bar {
     font-size: 14px;
     line-height: 48px;
     color: #c1311a; }
-  .extra-nav li:first-child {
+  .extra-nav > li:first-child {
     position: relative; }
     @media (min-width: 1080px) {
-      .extra-nav li:first-child {
+      .extra-nav > li:first-child {
         padding-left: 5px; } }
-    .extra-nav li:first-child:before {
+    .extra-nav > li:first-child:before {
       position: absolute;
       width: 40px;
       height: 48px;
@@ -7776,6 +7776,32 @@ html.show-menu .navbar-toggle .icon-bar {
           display: none; }
     html.show-menu .extra-nav .search-form {
       display: none; } }
+
+@media (min-width: 900px) {
+  .extra-nav ul > li {
+    position: relative; }
+    .extra-nav ul > li ul {
+      display: none;
+      position: absolute;
+      background-color: #f5f5f5;
+      border: 1px solid #ececec;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      list-style: none;
+      padding: 5px;
+      margin: 0; }
+      .extra-nav ul > li ul li {
+        padding: 0; }
+        .extra-nav ul > li ul li a {
+          display: block;
+          padding: 0;
+          text-align: left;
+          line-height: 30px; }
+    .extra-nav ul > li:hover {
+      cursor: pointer; }
+      .extra-nav ul > li:hover ul {
+        display: block; } }
 
 @media (min-width: 900px) {
   .search-form {
@@ -7990,7 +8016,7 @@ footer {
         width: 60%; } }
     @media (min-width: 1080px) {
       .hero .hero-text {
-        width: 50%; } }
+        width: 40%; } }
     .hero .hero-text .hero-button {
       margin-top: 25px;
       /*
@@ -8037,7 +8063,7 @@ footer {
   background-position: top; }
   @media (min-width: 900px) {
     .product-hero.hero .hero-text {
-      width: 60%; } }
+      width: 50%; } }
   .product-hero.hero .hero-text h3 {
     font-size: 45px;
     font-weight: 300;
@@ -8902,12 +8928,12 @@ ul.social-icons {
     -webkit-flex: 1 0 50%;
     -ms-flex: 1 0 50%;
     flex: 1 0 50%;
-    background: url("images/cream.png") top left repeat; }
+    background: url("images/cream.png") top left repeat;
+    padding: 15px; }
   .blog-card .blog-info-wrapper {
     border: 1px dashed #c13019;
     background: rgba(255, 255, 255, 0.75);
-    padding: 22px;
-    margin: 15px; }
+    padding: 22px; }
   .blog-card .buttons a {
     -webkit-background-clip: padding-box;
     -webkit-border-radius: 5px;
