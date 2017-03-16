@@ -376,7 +376,7 @@ html.show-menu {
               }
             }
           }
-          &:nth-child(5){
+          &:nth-child(1n+5){
             display: none;
           }
         }
@@ -392,6 +392,10 @@ html.show-menu {
 }
 
 //Brands dropdown styling. dropdowns on dropdowns
+.extra-nav ul ul {
+  display: none;
+}
+
 @media (min-width: $screen-md-min) {
   .extra-nav {
       ul > li {
@@ -416,7 +420,8 @@ html.show-menu {
               display: block;
               padding:0;
               text-align: left;
-              line-height: 30px;
+              padding:3px 0;
+              line-height: 24px;
             }
           }
         }

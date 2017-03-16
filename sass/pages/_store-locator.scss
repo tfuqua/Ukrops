@@ -96,29 +96,32 @@ table.table.store-locator {
  line-height: 1.5;
  color: #794400;
 }
+
 .store-branding{
 
-  h3 {
-    font-size: 36px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    color: #c09b72;
-    clear:both;
-    margin:40px 0 0;
-  }
-
-  .partner-imgs{
+  .partners{
     @media (min-width: $screen-sm-min) {
       @include flexbox();
       @include flex-direction(row);
       @include flex-wrap(wrap);
     }
 
-    .partner-img{
-      @include flexbox();
-      @include align-items(center);
-      @include justify-content(center);
+    .partner-list {
+      padding-top:20px;
+
+      > ul{
+        padding:0 0 0 20px;
+        margin:0;
+        color:#c1311a;
+
+        > li a {
+          color:#c1311a;
+        }
+      }
+    }
+
+    .partner{
+      padding:15px 20px;
 
       @media (min-width: $screen-sm-min) {
         @include flex-basis(50%);
@@ -128,10 +131,17 @@ table.table.store-locator {
         @include flex-basis(33%);
       }
 
-      img{
-        @include flex(0 0 auto);
-        padding:30px;
-        width:70%;
+      .partner-img{
+        height:150px;
+        @include flexbox();
+        @include align-items(flex-end);
+
+        img{
+          width:auto;
+          height: auto;
+          max-width: 90%;
+          max-height: 90%;
+        }
       }
     }
   }

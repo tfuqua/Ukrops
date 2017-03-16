@@ -7772,10 +7772,13 @@ html.show-menu .navbar-toggle .icon-bar {
               margin-left: -12px;
               font-size: 24px;
               color: #c1311a; }
-        html.show-menu .extra-nav ul li:nth-child(5) {
+        html.show-menu .extra-nav ul li:nth-child(1n+5) {
           display: none; }
     html.show-menu .extra-nav .search-form {
       display: none; } }
+
+.extra-nav ul ul {
+  display: none; }
 
 @media (min-width: 900px) {
   .extra-nav ul > li {
@@ -7797,7 +7800,8 @@ html.show-menu .navbar-toggle .icon-bar {
           display: block;
           padding: 0;
           text-align: left;
-          line-height: 30px; }
+          padding: 3px 0;
+          line-height: 24px; }
     .extra-nav ul > li:hover {
       cursor: pointer; }
       .extra-nav ul > li:hover ul {
@@ -9220,17 +9224,8 @@ table.table.store-locator {
   line-height: 1.5;
   color: #794400; }
 
-.store-branding h3 {
-  font-size: 36px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  color: #c09b72;
-  clear: both;
-  margin: 40px 0 0; }
-
 @media (min-width: 520px) {
-  .store-branding .partner-imgs {
+  .store-branding .partners {
     display: -webkit-box;
     display: -moz-box;
     display: -webkit-flex;
@@ -9245,40 +9240,45 @@ table.table.store-locator {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; } }
 
-.store-branding .partner-imgs .partner-img {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center; }
+.store-branding .partners .partner-list {
+  padding-top: 20px; }
+  .store-branding .partners .partner-list > ul {
+    padding: 0 0 0 20px;
+    margin: 0;
+    color: #c1311a; }
+    .store-branding .partners .partner-list > ul > li a {
+      color: #c1311a; }
+
+.store-branding .partners .partner {
+  padding: 15px 20px; }
   @media (min-width: 520px) {
-    .store-branding .partner-imgs .partner-img {
+    .store-branding .partners .partner {
       -webkit-flex-basis: 50%;
       -moz-flex-basis: 50%;
       -ms-flex-basis: 50%;
       flex-basis: 50%; } }
   @media (min-width: 900px) {
-    .store-branding .partner-imgs .partner-img {
+    .store-branding .partners .partner {
       -webkit-flex-basis: 33%;
       -moz-flex-basis: 33%;
       -ms-flex-basis: 33%;
       flex-basis: 33%; } }
-  .store-branding .partner-imgs .partner-img img {
-    -webkit-box-flex: 0 0 auto;
-    -moz-box-flex: 0 0 auto;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    padding: 30px;
-    width: 70%; }
+  .store-branding .partners .partner .partner-img {
+    height: 150px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
+    -ms-align-items: flex-end;
+    align-items: flex-end; }
+    .store-branding .partners .partner .partner-img img {
+      width: auto;
+      height: auto;
+      max-width: 90%;
+      max-height: 90%; }
 
 .dataTables_info {
   float: left;

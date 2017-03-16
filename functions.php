@@ -130,18 +130,6 @@ function change_wp_search_size($queryVars) {
 }
 add_filter('request', 'change_wp_search_size');
 
-
-add_action( 'pre_get_posts', 'my_change_sort_order');
-function my_change_sort_order($query){
-  if(is_archive()):
-   //If you wanted it for the archive of a custom post type use: is_post_type_archive( $post_type )
-     //Set the order ASC or DESC
-     $query->set( 'order', 'ASC' );
-     //Set the orderby
-     $query->set( 'orderby', 'menu_order' );
-  endif;
-};
-
 require_once('menu_walker.php');
 
 function excerpt($num) {
@@ -152,3 +140,17 @@ function my_gallery_style() {
     return "";
 }
 add_filter( 'use_default_gallery_style', '__return_false' );
+
+add_filter( 'template_include', 'portfolio_page_template', 99 );
+
+function portfolio_page_template( $template ) {
+
+	if ( is_page( 'portfolio' )  ) {
+		$new_template = locate_template( array( 'portfolio-page-template.php' ) );
+		if ( '' != $new_template ) {
+			return $new_template ;
+		}
+	}
+
+	return $template;
+}
