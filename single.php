@@ -27,7 +27,11 @@ get_header(); ?>
  	      </div>
  	    <?php
  				} else {
- 					$background =  get_template_directory_uri() . '/images/hero.png';
+ 					if (get_theme_mod('blog_image')) {
+						 $background = get_theme_mod('blog_image');
+					 } else {
+						 $background = '/images/blog-hero.jpg';
+					 }
  					?>
  					 <div class="hero mini-hero" style="background-image: url('<?php echo $background ?>');">
  						<div class="hero-text-wrapper">

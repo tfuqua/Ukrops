@@ -130,6 +130,18 @@ function change_wp_search_size($queryVars) {
 }
 add_filter('request', 'change_wp_search_size');
 
+
+add_action( 'pre_get_posts', 'my_change_sort_order');
+function my_change_sort_order($query){
+  if(is_archive()):
+   //If you wanted it for the archive of a custom post type use: is_post_type_archive( $post_type )
+     //Set the order ASC or DESC
+     $query->set( 'order', 'ASC' );
+     //Set the orderby
+     $query->set( 'orderby', 'menu_order' );
+  endif;
+};
+
 require_once('menu_walker.php');
 
 function excerpt($num) {
@@ -141,16 +153,27 @@ function my_gallery_style() {
 }
 add_filter( 'use_default_gallery_style', '__return_false' );
 
-add_filter( 'template_include', 'portfolio_page_template', 99 );
-
-function portfolio_page_template( $template ) {
-
-	if ( is_page( 'portfolio' )  ) {
-		$new_template = locate_template( array( 'portfolio-page-template.php' ) );
-		if ( '' != $new_template ) {
-			return $new_template ;
-		}
-	}
-
-	return $template;
+/**
+* Blog Image Upload
+**/
+function ukrops_customize_register( $wp_customize ) {
+$wp_customize->get_setting( 'blog_image' )->transport = 'postMessage';
+// Add and manipulate theme images to be used.
+$wp_customize->add_section('blog', array(
+"title" => 'Blog Hero Images',
+"priority" => 28,
+"description" => __( 'Upload images to display as nourish blog hero images.', 'theme-slug' )
+));
+$wp_customize->add_setting('blog_image', array(
+'default' => '',
+'type' => 'theme_mod',
+'capability' => 'edit_theme_options',
+));
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'blog_image', array(
+'label' => __( 'Blog Hero Image', 'theme-slug' ),
+'section' => 'blog',
+'settings' => 'blog_image',
+))
+);
 }
+add_action( 'customize_register', 'ukrops_customize_register' );
